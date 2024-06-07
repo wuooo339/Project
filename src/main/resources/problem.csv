@@ -1,0 +1,63 @@
+subject,type,questionText,options,correctAnswer
+Math,choice,What is 2 + 2?,1|2|3|4,4
+Math,choice,What is the square root of 16?,2|3|4|5,4
+Math,choice,What is 5 * 5?,10|15|20|25,25
+Math,choice,What is 10 / 2?,3|4|5|6,5
+Math,choice,What is 6 - 1?,4|5|6|7,5
+Math,choice,What is 12 / 3?,2|3|4|5,4
+Math,choice,What is 9 + 1?,8|9|10|11,10
+Math,choice,What is 8 - 2?,4|5|6|7,6
+Math,choice,What is 7 + 3?,9|10|11|12,10
+Math,choice,What is 2 * 3?,4|5|6|7,6
+Math,blank,The result of 3 + 5 is ______.,,8
+Math,blank,The square root of 9 is ______.,,3
+Math,blank,The result of 6 * 7 is ______.,,42
+Math,blank,The result of 12 / 4 is ______.,,3
+Math,blank,The result of 8 - 3 is ______.,,5
+Math,blank,The result of 10 + 2 is ______.,,12
+Math,blank,The result of 4 * 5 is ______.,,20
+Math,blank,The result of 18 / 2 is ______.,,9
+Math,blank,The result of 7 - 4 is ______.,,3
+Math,blank,The result of 9 + 6 is ______.,,15
+
+Science,choice,What planet is known as the Red Planet?,Earth|Mars|Jupiter|Saturn,Mars
+Science,choice,What gas do plants absorb from the atmosphere?,Oxygen|Carbon dioxide|Nitrogen|Helium,Carbon dioxide
+Science,choice,What is the chemical symbol for water?,H|O|H2O|CO2,H2O
+Science,choice,What force keeps us on the ground?,Magnetism|Electricity|Gravity|Friction,Gravity
+Science,choice,What organ pumps blood through the body?,Liver|Heart|Lungs|Kidneys,Heart
+Science,choice,What is the center of an atom called?,Electron|Proton|Nucleus|Neutron,Nucleus
+Science,choice,What is the hottest planet in our solar system?,Earth|Venus|Mars|Jupiter,Venus
+Science,choice,What is the process by which plants make food?,Digestion|Respiration|Photosynthesis|Transpiration,Photosynthesis
+Science,choice,What is the speed of light?,300,000 km/s|150,000 km/s|600,000 km/s|450,000 km/s,300,000 km/s
+Science,choice,What gas do humans exhale?,Oxygen|Carbon dioxide|Nitrogen|Hydrogen,Carbon dioxide
+Science,blank,The chemical formula for water is ______.,,H2O
+Science,blank,The force that keeps us grounded is called ______.,,Gravity
+Science,blank,The organ that pumps blood is the ______.,,Heart
+Science,blank,The hottest planet in the solar system is ______.,,Venus
+Science,blank,Plants make food through ______.,,Photosynthesis
+Science,blank,Humans exhale ______.,,Carbon dioxide
+Science,blank,The center of an atom is the ______.,,Nucleus
+Science,blank,The speed of light is ______ km/s.,,300,000
+Science,blank,Plants absorb ______ from the atmosphere.,,Carbon dioxide
+Science,blank,Mars is known as the ______ Planet.,,Red
+
+History,choice,Who was the first President of the United States?,Abraham Lincoln|George Washington|Thomas Jefferson|John Adams,George Washington
+History,choice,In which year did World War II end?,1940|1942|1945|1947,1945
+History,choice,Who wrote the Declaration of Independence?,George Washington|John Adams|Thomas Jefferson|James Madison,Thomas Jefferson
+History,choice,What ancient civilization built the pyramids?,Romans|Greeks|Egyptians|Mayans,Egyptians
+History,choice,Who was the British Prime Minister during WWII?,Winston Churchill|Neville Chamberlain|Clement Attlee|Harold Macmillan,Winston Churchill
+History,choice,In which year did the Titanic sink?,1910|1912|1914|1916,1912
+History,choice,Who was the first man to walk on the moon?,Buzz Aldrin|Yuri Gagarin|Neil Armstrong|Michael Collins,Neil Armstrong
+History,choice,What was the primary language of the Roman Empire?,Greek|Latin|Hebrew|Aramaic,Latin
+History,choice,Who was the famous queen of ancient Egypt?,Cleopatra|Nefertiti|Hatshepsut|Arsinoe,Cleopatra
+History,choice,What wall divided East and West Berlin?,Berlin Wall|Great Wall|Iron Curtain|Wall of China,Berlin Wall
+History,blank,The first President of the United States was ______.,,George Washington
+History,blank,World War II ended in ______.,,1945
+History,blank,The Declaration of Independence was written by ______.,,Thomas Jefferson
+History,blank,The civilization that built the pyramids was the ______.,,Egyptians
+History,blank,The British Prime Minister during WWII was ______.,,Winston Churchill
+History,blank,The Titanic sank in ______.,,1912
+History,blank,The first man to walk on the moon was ______.,,Neil Armstrong
+History,blank,The primary language of the Roman Empire was ______.,,Latin
+History,blank,The famous queen of ancient Egypt was ______.,,Cleopatra
+History,blank,The wall that divided East and West Berlin was the ______.,,Berlin Wall

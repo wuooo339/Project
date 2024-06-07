@@ -1,18 +1,23 @@
 package controller;
 
-import service.QuestionService;
 import model.Question;
+import service.QuestionService;
 
+import java.io.IOException;
 import java.util.List;
 
 public class QuestionController {
-    private QuestionService questionService = new QuestionService();
+    private final QuestionService questionService = new QuestionService();
 
-    public boolean addQuestion(Question question) {
-        return questionService.addQuestion(question);
+    public void addQuestion(Question question) {
+        questionService.addQuestion(question);
     }
 
     public List<Question> getQuestionsBySubject(String subject) {
         return questionService.getQuestionsBySubject(subject);
+    }
+
+    public void importQuestionsFromCSV(String filePath) throws IOException {
+        questionService.importQuestionsFromCSV(filePath);
     }
 }

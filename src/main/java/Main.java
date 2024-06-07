@@ -1,8 +1,6 @@
 import controller.UserController;
 import controller.QuestionController;
 import controller.ExamController;
-import model.ChoiceQuestion;
-import model.BlankQuestion;
 import model.Question;
 import model.User;
 import model.Exam;
@@ -84,12 +82,15 @@ public class Main {
     private static void professorMenu() {
         while (true) {
             System.out.println("1. 录入题目");
-            System.out.println("2. 退出");
+            System.out.println("2. 从CSV文件批量导入题目");
+            System.out.println("3. 退出");
             int choice = scanner.nextInt();
             scanner.nextLine();  // Consume newline
             if (choice == 1) {
                 addQuestion();
             } else if (choice == 2) {
+                importQuestionsFromCSV();
+            } else if (choice == 3) {
                 break;
             }
         }
@@ -102,10 +103,10 @@ public class Main {
         String subject = scanner.nextLine();
         System.out.println("请输入题目:");
         String questionText = scanner.nextLine();
+
+        Question question = new Question(subject, type, questionText, null, null);
+
         if (type.equals("choice")) {
-            ChoiceQuestion question = new ChoiceQuestion();
-            question.setSubject(subject);
-            question.setQuestionText(questionText);
             List<String> choices = new ArrayList<>();
             System.out.println("请输入选项 (输入'END'结束):");
             while (true) {
@@ -115,19 +116,29 @@ public class Main {
                 }
                 choices.add(choice);
             }
-            question.setChoices(choices);
+            String options = String.join("|", choices);
+            question.setOptions(options);
+
             System.out.println("请输入正确答案:");
             String correctAnswer = scanner.nextLine();
             question.setCorrectAnswer(correctAnswer);
-            questionController.addQuestion(question);
         } else if (type.equals("blank")) {
-            BlankQuestion question = new BlankQuestion();
-            question.setSubject(subject);
-            question.setQuestionText(questionText);
             System.out.println("请输入正确答案:");
             String correctAnswer = scanner.nextLine();
             question.setCorrectAnswer(correctAnswer);
-            questionController.addQuestion(question);
+        }
+
+        questionController.addQuestion(question);
+    }
+
+    private static void importQuestionsFromCSV() {
+        System.out.println("请输入CSV文件路径:");
+        String filePath = scanner.nextLine();
+        try {
+            questionController.importQuestionsFromCSV(filePath);
+            System.out.println("题目导入成功!");
+        } catch (Exception e) {
+            System.out.println("导入失败: " + e.getMessage());
         }
     }
 
@@ -138,6 +149,11 @@ public class Main {
         List<String> answers = new ArrayList<>();
         for (Question question : questions) {
             System.out.println(question.getQuestionText());
+            if (question.getChoices() != null) {
+                for (int i = 0; i < question.getChoices().size(); i++) {
+                    System.out.println((i + 1) + ". " + question.getChoices().get(i));
+                }
+            }
             String answer = scanner.nextLine();
             answers.add(answer);
         }
