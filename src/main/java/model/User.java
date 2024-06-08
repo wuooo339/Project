@@ -1,11 +1,20 @@
 package model;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
+    private static final long serialVersionUID = 1L;
     private String username;
     private String password;
     private String role;
 
-    // Getter and Setter for username
+    public User(String username, String password, String role) {
+        this.username = username;
+        this.password = password;
+        this.role = role;
+    }
+
+    // Getters and Setters
     public String getUsername() {
         return username;
     }
@@ -14,7 +23,6 @@ public class User {
         this.username = username;
     }
 
-    // Getter and Setter for password
     public String getPassword() {
         return password;
     }
@@ -23,7 +31,6 @@ public class User {
         this.password = password;
     }
 
-    // Getter and Setter for role
     public String getRole() {
         return role;
     }
