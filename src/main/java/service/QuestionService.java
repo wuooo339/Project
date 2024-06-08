@@ -11,22 +11,11 @@ import java.io.IOException;
 import java.util.List;
 
 public class QuestionService {
-    private final QuestionDao questionDao = new QuestionDao();
+    private QuestionDao questionDao = new QuestionDao();
 
-    // 添加题目
-    public void addQuestion(Question question) {
-        questionDao.addQuestion(question);
-    }
-
-    // 根据科目获取题目列表
-    public List<Question> getQuestionsBySubject(String subject) {
-        return questionDao.getQuestionsBySubject(subject);
-    }
-
-    // 从CSV文件批量导入题目
-    public void importQuestionsFromCSV(String filePath) throws IOException {
-        try (FileReader fileReader = new FileReader(filePath);
-             CSVParser csvParser = CSVFormat.DEFAULT.withFirstRecordAsHeader().parse(fileReader)) {
+    public void importQuestionsFromCSV(String filePath) {
+        try (FileReader reader = new FileReader(filePath);
+             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT.withHeader())) {
 
             for (CSVRecord csvRecord : csvParser) {
                 String subject = csvRecord.get("subject");
@@ -35,9 +24,18 @@ public class QuestionService {
                 String options = csvRecord.get("options");
                 String correctAnswer = csvRecord.get("correctAnswer");
                 Question question = new Question(subject, type, questionText, options, correctAnswer);
-                System.out.println("record:"+subject);
-                addQuestion(question);
+                questionDao.save(question);
             }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+    }
+
+    public List<Question> getQuestionsBySubject(String subject) {
+        return questionDao.findBySubject(subject);
+    }
+
+    public void addQuestion(Question question) {
+        questionDao.save(question);
     }
 }

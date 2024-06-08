@@ -1,7 +1,7 @@
 package model;
 
 import java.util.List;
-
+import model.Question;
 public class Exam {
     private String student;
     private List<Question> questions;

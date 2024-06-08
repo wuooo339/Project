@@ -7,12 +7,10 @@ import java.util.List;
 
 public class ExamService {
     private ExamDao examDao = new ExamDao();
-
     // 添加考试
     public void addExam(String student, List<Question> questions, List<String> answers) {
         examDao.addExam(new Exam(student, questions, answers));
     }
-
     // 根据学生获取考试列表
     public List<Exam> getExamsByStudent(String student) {
         return examDao.getExamsByStudent(student);

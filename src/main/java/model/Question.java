@@ -1,4 +1,5 @@
 package model;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -8,7 +9,7 @@ public class Question {
     private String questionText;
     private String options;
     private String correctAnswer;
-    private List<String> choices;  // 新增属性
+    private List<String> choices;
 
     public Question(String subject, String type, String questionText, String options, String correctAnswer) {
         this.subject = subject;
@@ -16,7 +17,7 @@ public class Question {
         this.questionText = questionText;
         this.options = options;
         this.correctAnswer = correctAnswer;
-        if (type.equals("choice") && options != null && !options.isEmpty()) {
+        if (type.equals("choice")) {
             this.choices = Arrays.asList(options.split("\\|"));
         }
     }
@@ -52,8 +53,8 @@ public class Question {
 
     public void setOptions(String options) {
         this.options = options;
-        if (this.type.equals("choice") && options != null && !options.isEmpty()) {
-            this.choices = Arrays.asList(options.split(","));
+        if (this.type.equals("choice")) {
+            this.choices = Arrays.asList(options.split("\\|"));
         }
     }
 
@@ -65,11 +66,11 @@ public class Question {
         this.correctAnswer = correctAnswer;
     }
 
-    public List<String> getChoices() {  // 新增 getter 方法
+    public List<String> getChoices() {
         return choices;
     }
 
-    public void setChoices(List<String> choices) {  // 新增 setter 方法
+    public void setChoices(List<String> choices) {
         this.choices = choices;
     }
 
