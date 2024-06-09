@@ -1,26 +1,37 @@
 package model;
 
+import java.io.Serializable;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
+import java.util.UUID;
 import model.Question;
-public class Exam {
+public class Exam implements Serializable {
+    private static final long serialVersionUID = 1L;
+    private String id; // Unique identifier for the exam
     private String student;
     private List<Question> questions;
     private List<String> answers;
     private int score;
-
+    private LocalDateTime dateTime; // Time of the exam
     public Exam(String student, List<Question> questions, List<String> answers) {
+        this.id = UUID.randomUUID().toString(); // Generate unique identifier
         this.student = student;
         this.questions = questions;
         this.answers = answers;
-        this.score = calculateScore();
+        this.dateTime = LocalDateTime.now();
+    }
+
+    public String getId() {
+        return id;
     }
 
     public String getStudent() {
         return student;
     }
 
-    public void setStudent(String student) {
-        this.student = student;
+    public LocalDateTime getTime() {
+        return dateTime.truncatedTo(ChronoUnit.SECONDS);
     }
 
     public List<Question> getQuestions() {
@@ -54,7 +65,11 @@ public class Exam {
         return null;
     }
 
-    private int calculateScore() {
+    public LocalDateTime getDateTime() {
+        return dateTime;
+    }
+
+    public int calculateScore() {
         int score = 0;
         for (int i = 0; i < questions.size(); i++) {
             Question question = questions.get(i);
@@ -63,6 +78,7 @@ public class Exam {
                 score++;
             }
         }
+        this.score = score;
         return score;
     }
 

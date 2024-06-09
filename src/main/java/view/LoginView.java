@@ -51,7 +51,7 @@ public class LoginView extends GridPane {
                 add(successLabel, 1, 3);
                 if (user.getRole().equals("student")) {
                     PauseTransition delay = new PauseTransition(Duration.seconds(1));
-                    delay.setOnFinished(event -> primaryStage.setScene(new Scene(new StudentView(primaryStage, username,questionController), 600, 400)));
+                    delay.setOnFinished(event -> primaryStage.setScene(new Scene(new StudentView(primaryStage, username,questionController,userController), 600, 400)));
                     delay.play();
                 } else if (user.getRole().equals("professor")) {
                     PauseTransition delay = new PauseTransition(Duration.seconds(1));
@@ -68,7 +68,7 @@ public class LoginView extends GridPane {
         });
         // Register Button
         Button registerButton = new Button("注册");
-        registerButton.setOnAction(e -> primaryStage.setScene(new Scene(new RegisterView(primaryStage, userController,questionController), 400, 300)));
+        registerButton.setOnAction(e -> primaryStage.setScene(new Scene(new RegisterView(primaryStage,userController,questionController), 400, 300)));
 
         HBox buttons = new HBox(10, loginButton, registerButton);
         add(buttons, 1, 2);

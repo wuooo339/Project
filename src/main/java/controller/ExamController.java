@@ -1,17 +1,24 @@
 package controller;
 
-import service.ExamService;
 import model.Exam;
-import model.Question;
-
+import service.ExamService;
 import java.util.List;
-
+import model.Question;
 public class ExamController {
     private ExamService examService = new ExamService();
-    public Exam createExam(String student, List<Question> questions, List<String> answers) {
-        return examService.createExam(student, questions, answers);
+
+    // Add exam
+    public void addExam(String student, List<Question> questions, List<String> answers) {
+        examService.addExam(student, questions, answers);
     }
+
+    // Get exams by student
     public List<Exam> getExamsByStudent(String student) {
         return examService.getExamsByStudent(student);
+    }
+
+    // Load exams
+    public List<Exam> loadExams() {
+        return examService.loadExams();
     }
 }

@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-
+import model.Question;
 public class QuestionDao {
     private static final String FILE_PATH = "src/main/resources/questions.dat";
     private List<Question> questions;

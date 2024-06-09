@@ -157,9 +157,8 @@ public class Main {
             String answer = scanner.nextLine();
             answers.add(answer);
         }
-        examController.createExam(username, questions, answers);
+        examController.addExam(username, questions, answers);
     }
-
     private static void viewScores(String username) {
         List<Exam> exams = examController.getExamsByStudent(username);
         for (Exam exam : exams) {
