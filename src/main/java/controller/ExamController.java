@@ -21,4 +21,12 @@ public class ExamController {
     public List<Exam> loadExams() {
         return examService.loadExams();
     }
+
+    public List<Exam> getAllExams() {
+        return examService.getAllExams();
+    }
+
+    public void deleteExam(String examId) {
+        examService.deleteExam(examId);
+    }
 }

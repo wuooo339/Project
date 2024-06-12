@@ -38,4 +38,11 @@ public class QuestionService {
     public void addQuestion(Question question) {
         questionDao.save(question);
     }
+    public List<Question> getAllQuestions() {
+        return questionDao.getAllQuestions();
+    }
+
+    public void deleteQuestion(String questionId) {
+        questionDao.deleteQuestion(questionId);
+    }
 }

@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.UUID;
+import java.time.format.DateTimeFormatter;
 import model.Question;
 public class Exam implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -21,6 +22,7 @@ public class Exam implements Serializable {
         this.answers = answers;
         this.dateTime = LocalDateTime.now();
     }
+
 
     public String getId() {
         return id;
@@ -84,5 +86,12 @@ public class Exam implements Serializable {
 
     public void recalculateScore() {
         this.score = calculateScore();
+    }
+
+    public String toString() {
+        this.score = calculateScore();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        String formattedDateTime = dateTime.format(formatter);
+        return "Student: " + student + ", Subject: " + getSubject() + ", Score: " + score + ", DateTime: " + formattedDateTime;
     }
 }

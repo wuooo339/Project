@@ -1,14 +1,17 @@
 package model;
 
 import java.io.Serializable;
+import java.util.UUID;
 
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;
+    private String id;
     private String username;
     private String password;
     private String role;
 
     public User(String username, String password, String role) {
+        this.id = UUID.randomUUID().toString();
         this.username = username;
         this.password = password;
         this.role = role;
@@ -37,5 +40,13 @@ public class User implements Serializable {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public String getId() {
+        return this.id;
+    }
+
+    public String toString() {
+        return "用户名: " + username + "密码: " + password + " 角色: "+role;
     }
 }

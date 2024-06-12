@@ -15,12 +15,15 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import view.LoginView;
+
 public class RegisterView extends GridPane {
 
     private UserController userController;
     private QuestionController questionController;
+
     public RegisterView(Stage primaryStage, UserController userController, QuestionController questionController) {
         this.userController = userController;
+        this.questionController = questionController;
         setPadding(new Insets(10, 10, 10, 10));
         setVgap(8);
         setHgap(10);
@@ -40,7 +43,7 @@ public class RegisterView extends GridPane {
         // Role
         Label roleLabel = new Label("角色:");
         ComboBox<String> roleInput = new ComboBox<>();
-        roleInput.getItems().addAll("student", "professor");
+        roleInput.getItems().addAll("student", "professor", "admin");
         add(roleLabel, 0, 2);
         add(roleInput, 1, 2);
 
@@ -51,30 +54,30 @@ public class RegisterView extends GridPane {
             String password = passwordInput.getText();
             String role = roleInput.getValue();
             if (role == null) {
-                Label failureLabel = new Label("请选择一个角色。");
-                add(failureLabel, 1, 3);
-                PauseTransition delay = new PauseTransition(Duration.seconds(1));
-                delay.setOnFinished(event -> getChildren().remove(failureLabel));
-                delay.play();
+                showMessage("请选择一个角色。");
                 return;
             }
             boolean success = userController.register(username, password, role);
             if (success) {
-                Label successLabel = new Label("注册成功！" + username);
-                add(successLabel, 1, 3);
+                showMessage("注册成功！" + username);
                 PauseTransition delay = new PauseTransition(Duration.seconds(1));
-                delay.setOnFinished(event -> primaryStage.setScene(new Scene(new LoginView(primaryStage, userController,questionController), 400, 300)));
+                delay.setOnFinished(event -> primaryStage.setScene(new Scene(new LoginView(primaryStage, userController, questionController), 400, 300)));
                 delay.play();
             } else {
-                Label failureLabel = new Label("注册失败，请重试。");
-                add(failureLabel, 1, 3);
-                PauseTransition delay = new PauseTransition(Duration.seconds(1));
-                delay.setOnFinished(event -> getChildren().remove(failureLabel));
-                delay.play();
+                showMessage("注册失败，请重试。");
             }
         });
 
         HBox buttons = new HBox(10, registerButton);
         add(buttons, 1, 4);
     }
+
+    private void showMessage(String message) {
+        Label messageLabel = new Label(message);
+        add(messageLabel, 1, 3);
+        PauseTransition delay = new PauseTransition(Duration.seconds(1));
+        delay.setOnFinished(event -> getChildren().remove(messageLabel));
+        delay.play();
+    }
 }
+

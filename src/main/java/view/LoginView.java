@@ -16,6 +16,8 @@ import javafx.util.Duration;
 import view.StudentView;
 import view.ProfessorView;
 import view.RegisterView;
+import view.AdminView;
+
 import model.User;
 public class LoginView extends GridPane {
 
@@ -56,6 +58,11 @@ public class LoginView extends GridPane {
                 } else if (user.getRole().equals("professor")) {
                     PauseTransition delay = new PauseTransition(Duration.seconds(1));
                     delay.setOnFinished(event -> primaryStage.setScene(new Scene(new ProfessorView(primaryStage,MainApp.getQuestionController(),userController), 600, 400)));
+                    delay.play();
+                }
+                else if (user.getRole().equals("admin")) {
+                    PauseTransition delay = new PauseTransition(Duration.seconds(1));
+                    delay.setOnFinished(event -> primaryStage.setScene(new Scene(new AdminView(primaryStage,userController,MainApp.getExamController(),MainApp.getQuestionController()), 600, 400)));
                     delay.play();
                 }
             } else {

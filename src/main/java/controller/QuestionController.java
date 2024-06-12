@@ -20,4 +20,12 @@ public class QuestionController {
     public void importQuestionsFromCSV(String filePath) throws IOException {
         questionService.importQuestionsFromCSV(filePath);
     }
+
+    public List<Question> getAllQuestions() {
+        return questionService.getAllQuestions();
+    }
+
+    public void deleteQuestion(String questionId) {
+        questionService.deleteQuestion(questionId);
+    }
 }

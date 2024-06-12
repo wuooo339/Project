@@ -20,4 +20,12 @@ public class ExamService {
     public List<Exam> loadExams() {
         return examDao.loadExams();
     }
+    public List<Exam> getAllExams() {
+        return examDao.getAllExams();
+    }
+
+    public void deleteExam(String examId) {
+        examDao.deleteExam(examId);
+    }
+
 }

@@ -5,15 +5,27 @@ import model.User;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class UserDao {
     private static final String FILE_PATH = "src/main/resources/users.dat";
     private Map<String, User> users;
-
     public UserDao() {
         users = loadUsers();
+    }
+
+    public Map<String, User> getAllUsers() {
+        return users;
+    }
+
+    public boolean deleteUser(String username) {
+        boolean result = users.remove(username) != null;
+        saveUsers();
+        return result;
     }
 
     public boolean save(User user) {

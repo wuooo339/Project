@@ -3,6 +3,8 @@ package controller;
 import service.UserService;
 import model.User;
 
+import java.util.List;
+
 public class UserController {
     private UserService userService = new UserService();
 
@@ -13,5 +15,17 @@ public class UserController {
 
     public User login(String username, String password) {
         return userService.login(username, password);
+    }
+
+    public void deleteUser(String username) {
+        userService.deleteUser(username);
+    }
+
+    public List<User> getAllUsers() {
+        return userService.getAllUsers();
+    }
+
+    public List<String> getAllUsernames() {
+        return userService.getAllUsernames();
     }
 }

@@ -8,6 +8,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+
 import model.Question;
 public class QuestionDao {
     private static final String FILE_PATH = "src/main/resources/questions.dat";
@@ -15,6 +16,16 @@ public class QuestionDao {
 
     public QuestionDao() {
         questions = loadQuestions();
+    }
+
+    public List<Question> getAllQuestions() {
+        return questions;
+    }
+
+    public boolean deleteQuestion(String questionId) {
+        boolean result = questions.removeIf(q -> q.getId().equals(questionId));
+        saveQuestions();
+        return result;
     }
 
     public boolean addQuestion(Question question) {

@@ -3,9 +3,11 @@ package model;
 import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
+import java.util.UUID;
 
 public class Question implements Serializable {
     private static final long serialVersionUID = 1L;  // 添加一个唯一的序列化版本ID
+    private String id;
     private String subject;
     private String type;
     private String questionText;
@@ -14,6 +16,7 @@ public class Question implements Serializable {
     private transient List<String> choices;  // 使用 transient 关键字忽略此字段的序列化
 
     public Question(String subject, String type, String questionText, String options, String correctAnswer) {
+        this.id = UUID.randomUUID().toString();
         this.subject = subject;
         this.type = type;
         this.questionText = questionText;
@@ -90,4 +93,13 @@ public class Question implements Serializable {
             this.choices = Arrays.asList(options.split("\\|"));
         }
     }
+
+    public String getId() {
+        return this.id;
+    }
+
+    public String toString() {
+        return "Subject: " + subject + ", Type: " + type + ", Question: " + questionText;
+    }
+
 }

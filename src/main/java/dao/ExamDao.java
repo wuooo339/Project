@@ -17,6 +17,16 @@ public class ExamDao {
         exams = loadExams();
     }
 
+    public List<Exam> getAllExams() {
+        return exams;
+    }
+
+    public boolean deleteExam(String examId) {
+        boolean result = exams.removeIf(e -> e.getId().equals(examId));
+        saveExams();
+        return result;
+    }
+
     // 添加考试
     public boolean addExam(Exam exam) {
         boolean result = exams.add(exam);
