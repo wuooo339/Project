@@ -24,6 +24,9 @@ public class AddQuestionView {
     private TextField correctAnswerField;
 
     @FXML
+    private TextField difficultyField;
+
+    @FXML
     private Button addButton;
 
     private QuestionController questionController = new QuestionController();
@@ -39,7 +42,8 @@ public class AddQuestionView {
         String questionText = questionTextField.getText();
         String options = optionsField.getText();
         String correctAnswer = correctAnswerField.getText();
-        model.Question question = new model.Question(subject, type, questionText, options, correctAnswer);
+        int difficulty = Integer.parseInt(difficultyField.getText().trim());
+        model.Question question = new model.Question(subject, type, questionText, options, correctAnswer,difficulty);
         questionController.addQuestion(question);
     }
 }

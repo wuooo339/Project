@@ -40,6 +40,11 @@ public class ExamDao {
                 .filter(e -> e.getStudent().equalsIgnoreCase(student))
                 .collect(Collectors.toList());
     }
+    public List<Exam> findExamsByStudentAndSubject(String username, String subject) {
+        return exams.stream()
+                .filter(exam -> exam.getStudent().equals(username) && exam.getSubject().equals(subject))
+                .collect(Collectors.toList());
+    }
 
     // Public method to load exams
     public List<Exam> loadExams() {

@@ -104,7 +104,7 @@ public class Main {
         System.out.println("请输入题目:");
         String questionText = scanner.nextLine();
 
-        Question question = new Question(subject, type, questionText, null, null);
+        Question question = new Question(subject, type, questionText, null, null,1);
 
         if (type.equals("choice")) {
             List<String> choices = new ArrayList<>();

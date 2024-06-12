@@ -70,4 +70,12 @@ public class QuestionDao {
         }
         return new ArrayList<>();
     }
+
+    public List<Question> findBySubjectAndDifficulty(String subject, int difficulty, int limit) {
+        return questions.stream()
+                .filter(question -> question.getSubject().equals(subject) && question.getDifficulty() == difficulty)
+                .limit(limit)
+                .collect(Collectors.toList());
+    }
+
 }

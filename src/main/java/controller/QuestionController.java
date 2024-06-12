@@ -20,7 +20,9 @@ public class QuestionController {
     public void importQuestionsFromCSV(String filePath) throws IOException {
         questionService.importQuestionsFromCSV(filePath);
     }
-
+    public List<Question> getQuestionsBySubjectAndDifficulty(String subject, int difficulty, int limit) {
+        return questionService.getQuestionsBySubjectAndDifficulty(subject, difficulty, limit);
+    }
     public List<Question> getAllQuestions() {
         return questionService.getAllQuestions();
     }

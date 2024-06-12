@@ -33,7 +33,7 @@ public class Exam implements Serializable {
     }
 
     public LocalDateTime getTime() {
-        return dateTime.truncatedTo(ChronoUnit.SECONDS);
+        return dateTime;
     }
 
     public List<Question> getQuestions() {
@@ -94,4 +94,5 @@ public class Exam implements Serializable {
         String formattedDateTime = dateTime.format(formatter);
         return "Student: " + student + ", Subject: " + getSubject() + ", Score: " + score + ", DateTime: " + formattedDateTime;
     }
+
 }

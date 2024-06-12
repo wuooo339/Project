@@ -21,6 +21,9 @@ public class ExamController {
     public List<Exam> loadExams() {
         return examService.loadExams();
     }
+    public List<Exam> getExamsByStudentAndSubject(String username, String subject) {
+        return examService.getExamsByStudentAndSubject(username, subject);
+    }
 
     public List<Exam> getAllExams() {
         return examService.getAllExams();

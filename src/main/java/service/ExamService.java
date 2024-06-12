@@ -23,6 +23,9 @@ public class ExamService {
     public List<Exam> getAllExams() {
         return examDao.getAllExams();
     }
+    public List<Exam> getExamsByStudentAndSubject(String username, String subject) {
+        return examDao.findExamsByStudentAndSubject(username, subject);
+    }
 
     public void deleteExam(String examId) {
         examDao.deleteExam(examId);

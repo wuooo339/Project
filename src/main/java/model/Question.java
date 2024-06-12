@@ -13,19 +13,22 @@ public class Question implements Serializable {
     private String questionText;
     private String options;
     private String correctAnswer;
+    private int difficulty;  // 添加难度属性
     private transient List<String> choices;  // 使用 transient 关键字忽略此字段的序列化
 
-    public Question(String subject, String type, String questionText, String options, String correctAnswer) {
+    public Question(String subject, String type, String questionText, String options, String correctAnswer, int difficulty) {
         this.id = UUID.randomUUID().toString();
         this.subject = subject;
         this.type = type;
         this.questionText = questionText;
         this.options = options;
         this.correctAnswer = correctAnswer;
+        this.difficulty = difficulty;
         if (type.equals("choice")) {
             this.choices = Arrays.asList(options.split("\\|"));
         }
     }
+
     // Getters and setters
     public String getSubject() {
         return subject;
@@ -70,6 +73,14 @@ public class Question implements Serializable {
         this.correctAnswer = correctAnswer;
     }
 
+    public int getDifficulty() {
+        return difficulty;
+    }
+
+    public void setDifficulty(int difficulty) {
+        this.difficulty = difficulty;
+    }
+
     public List<String> getChoices() {
         if (choices == null && type.equals("choice")) {
             this.choices = Arrays.asList(options.split("\\|"));
@@ -83,7 +94,11 @@ public class Question implements Serializable {
 
     // Method to check answer
     public boolean checkAnswer(String answer) {
-        return this.correctAnswer.equals(answer);
+        if (answer != null && !answer.trim().isEmpty()) {
+            return this.correctAnswer.equals(answer);
+        } else {
+            return false;
+        }
     }
 
     // 序列化后重建 choices 字段
@@ -101,5 +116,4 @@ public class Question implements Serializable {
     public String toString() {
         return "Subject: " + subject + ", Type: " + type + ", Question: " + questionText;
     }
-
 }
