@@ -1,11 +1,8 @@
 package view;
-import controller.UserController;
-import controller.QuestionController;
-import controller.ExamController;
+import controller.*;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import view.LoginView;
 
 public class MainApp extends Application {
 

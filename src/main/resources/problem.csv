@@ -269,4 +269,72 @@ Computer,choice,What does USB stand for?,Universal Serial Bus|Universal System B
 Computer,blank,The hardware that outputs sound is a ______.,,speaker,2
 Computer,choice,What does IP stand for?,Internet Protocol|Internet Program|Internal Protocol|Internal Program, Internet Protocol, 2
 Computer,blank,The protocol used to transfer web pages is ______.,,HTTP,2
-
+Math,blank,The sum of the measures of the interior angles of a triangle is ______ degrees.,,180,3
+Math,blank,The value of π (pi) to two decimal places is ______.,,3.14,3
+Math,blank,The square root of 49 is ______.,,7,3
+Math,blank,If a = 5 and b = 3, then a^2 + b^2 = ______.,,34,3
+Math,blank,The formula for the area of a circle is π × r^______.,,2,3
+Math,choice,Which of the following is a prime number?,"2|6|11|15",11,3
+Math,choice,What is the value of 3^4?,"81|27|12|64",81,3
+Math,choice,Which of the following is a quadrilateral?,"Circle|Triangle|Rectangle|Sphere",Rectangle,3
+Math,choice,If x = 3 and y = 5 and what is the value of 2x + 3y?,"21|25|29|33",29,3
+Science,blank,The process by which green plants make their own food is called ______.,,photosynthesis,3
+Science,blank,The unit of measurement for electric current is the ______.,,ampere,3
+Science,blank,The chemical symbol for sodium is ______.,,Na,3
+Science,blank,The theory that explains the origin of the universe is known as the ______ theory.,,Big Bang,3
+Science,blank,The process of burning a substance with oxygen is called ______.,,combustion,3
+Science,choice,Which of the following is a renewable energy source?,"Coal|Natural Gas|Wind|Gasoline",Wind,3
+Science,choice,What is the process called when water changes from a liquid to a gas?,"Evaporation|Condensation|Sublimation|Precipitation",Evaporation,3
+Science,choice,Which of the following is a compound?,"Oxygen|Hydrogen|Water|Nitrogen",Water,3
+Science,choice,Which of the following is a physical property of matter?,"Color|Density|Taste|Chemical Composition",Density,3
+Science,choice,What is the name of the force that attracts objects towards each other?,"Gravity|Friction|Magnetism|Buoyancy",Gravity,3
+History,blank,The American Civil War was fought between ______ and ______.,,North and South,3
+History,blank,The Renaissance period began in the ______ century.,,14th,3
+History,blank,The pyramids of Giza were built in ______.,,Egypt,3
+History,blank,The First World War started in the year ______.,,1914,3
+History,blank,The fall of the Roman Empire occurred in ______.,,476 AD,3
+History,choice,Who was the first president of the United States?,"George Washington|Thomas Jefferson|Abraham Lincoln|John Adams",George Washington,3
+History,choice,Which ancient civilization built the Great Wall of China?,"Egyptians|Romans|Greeks|Chinese",Chinese,3
+History,choice,In which year did World War II end?,"1939|1941|1945|1948",1945,3
+History,choice,Which event marked the beginning of the French Revolution?,"Storming of the Bastille|Reign of Terror|Napoleonic Wars|Treaty of Versailles",Storming of the Bastille,3
+History,choice,Who was the leader of the Soviet Union during World War II?,"Joseph Stalin|Vladimir Lenin|Nikita Khrushchev|Mikhail Gorbachev",Joseph Stalin,3
+English,blank,The past tense of the verb "go" is ______.,,went,3
+English,blank,A word that is opposite in meaning to another word is called an ______.,,antonym,3
+English,blank,The study of the structure and meaning of words is called ______.,,etymology,3
+English,blank,A ______ is a group of words that express a complete thought.,,sentence,3
+English,blank,A ______ is a figure of speech that makes a comparison between two things without using "like" or "as.",,metaphor,3
+English,choice,Which of the following is a preposition?,"And|But|From|Why",From,3
+English,choice,Which of the following is an example of an adverb?,"Quickly|Book|Laugh|Table",Quickly,3
+English,choice,What is the correct way to spell the plural of "box"?,"Boxs|Boxez|Boxes|Boxies",Boxes,3
+English,choice,Which of the following is a verb?,"Apple|Run|Red|Because",Run,3
+English,choice,Which of the following is a synonym for "intelligent"?,"Foolish|Clever|Lazy|Angry",Clever,3
+Geography,blank,The largest ocean in the world is the ______ Ocean.,,Pacific,3
+Geography,blank,The equator is an imaginary line that divides the Earth into the ______ and ______ hemispheres.,,Northern and Southern,3
+Geography,blank,The Amazon River flows through the country of ______.,,Brazil,3
+Geography,blank,The capital city of Australia is ______.,,Canberra,3
+Geography,blank,The highest mountain peak in the world is ______.,,Mount Everest,3
+Geography,choice,Which of the following is a landlocked country?,"Australia|Japan|Switzerland|Brazil",Switzerland,3
+Geography,choice,Which of the following is a desert?,"Sahara|Mississippi|Everglades|Amazon",Sahara,3
+Geography,choice,What is the name of the largest continent in the world?,"Asia|Africa|North America|Europe",Asia,3
+Geography,choice,Which of the following is a peninsula?,"Hawaii|Greenland|Iceland|Malta",Malta,3
+Geography,choice,Which of the following is a strait?,"Nile|English Channel|Everest|Andes",English Channel,3
+Computer,choice,"Which of the following is not a programming paradigm?","Procedural|Object-Oriented|Functional|Microsoft",Microsoft,3
+Computer,choice,"What is the time complexity of the quicksort algorithm in the average case?","O(n)|O(n^2)|O(n log n)|O(log n)","O(n log n)",3
+Computer,choice,Which of the following is a NoSQL database?,MySQL|PostgreSQL|MongoDB|Oracle,MongoDB,3
+Computer,choice,"What is the name of the data structure used in the implementation of a web browser's back and forward buttons?","Queue|Stack|Tree|Linked List",Stack,3
+Computer,choice,"Which of the following is a characteristic of the Agile software development methodology?","Big Design Upfront|Comprehensive Documentation|Iterative Development|Waterfall Model",Iterative Development,3
+Computer,choice,"What is the purpose of the 'finally' block in Java exception handling?","To execute code regardless of whether an exception is thrown or not|To handle a specific type of exception|To create a new exception|To catch and rethrow an exception","To execute code regardless of whether an exception is thrown or not",3
+Computer,choice,Which of the following is a type of computer network topology?,Ring|Mesh|Bus|All of the above,All of the above,3
+Computer,choice,"What is the name of the algorithm used by search engines to rank web pages?","Bubble Sort|Merge Sort|PageRank|Quicksort",PageRank,3
+Computer,choice,"Which of the following is a type of relation in the relational database model?","One-to-one|One-to-many|Many-to-many|All of the above","All of the above",3
+Computer,choice,"What is the purpose of a virtual machine in the context of software development?","To translate high-level programming languages into machine code|To provide a platform-independent environment for running programs|To optimize code for better performance|To create graphical user interfaces","To provide a platform-independent environment for running programs",3
+Computer,blank,The process of converting high-level programming language code into machine-readable code is called ______.,,compilation,3
+Computer,blank,The ______ is the primary storage unit of a computer system.,,RAM (Random Access Memory),3
+Computer,blank,The ______ protocol is used for sending and receiving email over the internet.,,SMTP (Simple Mail Transfer Protocol),3
+Computer,blank,The ______ is the set of rules and conventions that govern how data is transmitted over a network.,,protocol,3
+Computer,blank,"In the context of computer security, ______ is the process of identifying and authenticating users or devices.",,authentication,3
+Computer,blank,The ______ is the set of instructions that tells the computer what to do.,,program,3
+Computer,blank,The ______ is the smallest addressable unit of memory in a computer system.,,byte,3
+Computer,blank,"The process of breaking down a complex problem into smaller, more manageable parts is known as ______.",,decomposition,3
+Computer,blank,The ______ is a software component that manages system resources and provides services to other programs.,,operating system,3
+Computer,blank,In computer networks ______ is the process of dividing data into smaller units for transmission and reassembling it at the destination.,,packet switching,3

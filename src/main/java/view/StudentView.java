@@ -5,9 +5,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import controller.ExamController;
-import controller.QuestionController;
-import controller.UserController;
+import controller.*;
 public class StudentView extends VBox {
     private String username;
     private UserController userController;
@@ -27,7 +25,7 @@ public class StudentView extends VBox {
         // View Scores Button
         Button viewScoresButton = new Button("查看成绩");
         viewScoresButton.setOnAction(e -> {
-            primaryStage.setScene(new Scene(new view.ViewScoresView(primaryStage, username, examController,userController), 900, 600));
+            primaryStage.setScene(new Scene(new view.ViewScoresView(primaryStage, username, examController,questionController,userController,false), 900, 600));
         });
 
         // Logout Button

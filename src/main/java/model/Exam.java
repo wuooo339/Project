@@ -95,4 +95,7 @@ public class Exam implements Serializable {
         return "Student: " + student + ", Subject: " + getSubject() + ", Score: " + score + ", DateTime: " + formattedDateTime;
     }
 
+    public String getStudentUsername() {
+        return student;
+    }
 }

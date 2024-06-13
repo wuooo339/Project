@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AddQuestionView">
+    <children>
+        <TextField fx:id="subjectField" promptText="科目" />
+        <TextField fx:id="typeField" promptText="题目类型" />
+        <TextArea fx:id="questionTextField" promptText="题目内容" />
+        <TextField fx:id="optionsField" promptText="选项 (用|分隔)" />
+        <TextField fx:id="correctAnswerField" promptText="正确答案" />
+        <TextField fx:id="difficultyField" promptText="难度" />
+        <Button fx:id="addButton" text="添加题目" />
+        <Label fx:id="feedbackLabel" text="" />
+        <Button fx:id="backButton" text="返回" /> <!-- 新增返回按钮 -->
+    </children>
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
+    <spacing>10</spacing>
+</VBox>

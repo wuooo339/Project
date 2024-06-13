@@ -13,10 +13,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import view.StudentView;
-import view.ProfessorView;
-import view.RegisterView;
-import view.AdminView;
 
 import model.User;
 public class LoginView extends GridPane {

@@ -1,16 +1,15 @@
 package service;
 
-import dao.ExamDao;
-import model.Exam;
-import model.Question;
-
+import dao.*;
+import model.*;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ExamService {
     private ExamDao examDao = new ExamDao();
     // Add exam
-    public void addExam(String student, List<Question> questions, List<String> answers) {
-        examDao.addExam(new Exam(student, questions, answers));
+    public void addExam(Exam exam) {
+        examDao.addExam(exam);
     }
     // Get exams by student
     public List<Exam> getExamsByStudent(String student) {
@@ -30,5 +29,10 @@ public class ExamService {
     public void deleteExam(String examId) {
         examDao.deleteExam(examId);
     }
-
+    public List<Exam> getExamsBySubject(String subject) {
+        List<Exam> allExams = examDao.getAllExams();
+        return allExams.stream()
+                .filter(exam -> exam.getSubject().equals(subject))
+                .collect(Collectors.toList());
+    }
 }

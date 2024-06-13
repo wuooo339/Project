@@ -8,7 +8,6 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-
 public class ExamDao {
     private static final String FILE_PATH = "src/main/resources/exams.dat";
     private List<Exam> exams;

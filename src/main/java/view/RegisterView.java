@@ -1,7 +1,6 @@
 package view;
 
-import controller.UserController;
-import controller.QuestionController;
+import controller.*;
 import javafx.animation.PauseTransition;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -14,7 +13,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import view.LoginView;
 
 public class RegisterView extends GridPane {
 

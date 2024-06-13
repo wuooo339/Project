@@ -1,8 +1,7 @@
 package controller;
 
 import service.UserService;
-import model.User;
-
+import model.*;
 import java.util.List;
 
 public class UserController {

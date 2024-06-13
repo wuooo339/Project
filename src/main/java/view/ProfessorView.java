@@ -1,17 +1,19 @@
 package view;
 
-import javafx.scene.control.ScrollPane;
-import model.Question;
+import controller.ExamController;
+import controller.QuestionController;
+import controller.UserController;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import controller.QuestionController;
-import controller.UserController;
-import view.LoginView;
+import model.Question;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -28,21 +30,40 @@ public class ProfessorView extends VBox {
 
         // Add Question Button
         Button addQuestionButton = new Button("录入题目 (CSV)");
-        addQuestionButton.setOnAction(e -> primaryStage.setScene(new Scene(new AddQuestionView(primaryStage), 600, 400)));
+        addQuestionButton.setOnAction(e -> primaryStage.setScene(new Scene(new AddQuestionCSVView(primaryStage), 600, 400)));
+
+        // Add Individual Question Button
+        Button addIndividualQuestionButton = new Button("录入单个题目");
+        addIndividualQuestionButton.setOnAction(e -> {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/AddQuestionView.fxml"));
+                VBox addQuestionPane = loader.load();
+                AddQuestionView addQuestionView = loader.getController();
+                addQuestionView.setQuestionController(questionController); // 设置控制器
+                addQuestionView.setPrimaryStage(primaryStage);
+                primaryStage.setScene(new Scene(addQuestionPane, 600, 400));
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        });
 
         // View Questions Button
         Button viewQuestionsButton = new Button("查看题目");
         viewQuestionsButton.setOnAction(e -> primaryStage.setScene(new Scene(new ViewQuestionsView(primaryStage), 600, 400)));
 
+        // View Scores Button
+        Button viewScoresButton = new Button("查看成绩");
+        viewScoresButton.setOnAction(e -> primaryStage.setScene(new Scene(new ViewScoresView(primaryStage, null, new ExamController(), questionController, userController, true), 800, 1000)));
+
         // Logout Button
         Button logoutButton = new Button("退出登录");
-        logoutButton.setOnAction(e -> primaryStage.setScene(new Scene(new LoginView(primaryStage, userController,questionController), 400, 300)));
+        logoutButton.setOnAction(e -> primaryStage.setScene(new Scene(new LoginView(primaryStage, userController, questionController), 400, 300)));
 
-        getChildren().addAll(addQuestionButton, viewQuestionsButton, logoutButton);
+        getChildren().addAll(addQuestionButton, addIndividualQuestionButton, viewQuestionsButton, viewScoresButton, logoutButton);
     }
 
-    class AddQuestionView extends VBox {
-        public AddQuestionView(Stage primaryStage) {
+    class AddQuestionCSVView extends VBox {
+        public AddQuestionCSVView(Stage primaryStage) {
             setPadding(new Insets(10, 10, 10, 10));
             setSpacing(10);
 

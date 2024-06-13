@@ -6,10 +6,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import controller.ExamController;
-import model.Exam;
-import controller.UserController;
-import controller.QuestionController;
+import controller.*;
+import model.*;
 
 public class ManageExamsView extends VBox {
     private ExamController examController;
@@ -31,10 +29,8 @@ public class ManageExamsView extends VBox {
                 examListView.getItems().remove(selectedExam);
             }
         });
-
         Button backButton = new Button("返回");
         backButton.setOnAction(e -> primaryStage.setScene(new Scene(new view.AdminView(primaryStage, new UserController(), examController, new QuestionController()), 600, 400)));
-
         getChildren().addAll(examListView, deleteExamButton, backButton);
     }
 }

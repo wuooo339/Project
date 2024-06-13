@@ -6,9 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import controller.UserController;
-import controller.ExamController;
-import controller.QuestionController;
+import controller.*;
 import model.User;
 
 public class ManageUsersView extends VBox {

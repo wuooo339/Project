@@ -6,25 +6,23 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 public class QuestionService {
     private QuestionDao questionDao = new QuestionDao();
-
     public void importQuestionsFromCSV(String filePath) {
-        try (FileReader reader = new FileReader(filePath);
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(filePath), StandardCharsets.UTF_8));
              CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT.withHeader())) {
 
             for (CSVRecord csvRecord : csvParser) {
-                String subject = csvRecord.get("subject");
-                String type = csvRecord.get("type");
-                String questionText = csvRecord.get("questionText");
-                String options = csvRecord.get("options");
-                String correctAnswer = csvRecord.get("correctAnswer").trim();
+                String subject = csvRecord.get("subject").trim();
+                String type = csvRecord.get("type").trim();
+                String questionText = csvRecord.get("questionText").trim();
+                String options = csvRecord.get("options").trim();
+                String correctAnswer = csvRecord.get("correctAnswer").trim().replace("\" ", " ");
                 int difficulty;
-
                 try {
                     difficulty = Integer.parseInt(csvRecord.get("difficulty").trim());
                 } catch (NumberFormatException e) {
@@ -32,7 +30,6 @@ public class QuestionService {
                     e.printStackTrace();
                     continue; // Skip this record and move to the next
                 }
-
                 Question question = new Question(subject, type, questionText, options, correctAnswer, difficulty);
                 questionDao.save(question);
             }
@@ -40,6 +37,7 @@ public class QuestionService {
             e.printStackTrace();
         }
     }
+
 
     public List<Question> getQuestionsBySubject(String subject) {
         return questionDao.findBySubject(subject);

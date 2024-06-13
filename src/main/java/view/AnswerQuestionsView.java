@@ -14,7 +14,6 @@ import java.util.List;
 import controller.ExamController;
 import controller.QuestionController;
 import controller.UserController;
-import view.StudentView;
 
 public class AnswerQuestionsView extends VBox {
     private QuestionController questionController = new QuestionController();
@@ -33,7 +32,7 @@ public class AnswerQuestionsView extends VBox {
 
         Label difficultyLabel = new Label("难度:");
         ComboBox<Integer> difficultyComboBox = new ComboBox<>();
-        difficultyComboBox.getItems().addAll(1, 2);
+        difficultyComboBox.getItems().addAll(1, 2, 3);
 
         Label questionCountLabel = new Label("题目数量:");
         TextField questionCountField = new TextField();
@@ -94,7 +93,7 @@ public class AnswerQuestionsView extends VBox {
                 List<String> answers = getStrings(answerFields);
                 exam.setAnswers(answers);
                 exam.calculateScore();
-                examController.addExam(username, questions, answers);
+                examController.addExam(exam);
                 Label scoreLabel = new Label("测试成绩：" + exam.getScore());
                 getChildren().add(scoreLabel);
                 PauseTransition delay = new PauseTransition(Duration.seconds(1));
