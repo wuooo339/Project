@@ -1,0 +1,15 @@
+@startuml
+skin rose
+
+class Examcontroler {
+    - exams: List<Exam>
+    + methods()
+}
+
+class Exam {
+    - attributes
+    + methods()
+}
+
+Examcontroler *-- "1" Exam
+@enduml

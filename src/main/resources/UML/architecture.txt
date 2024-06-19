@@ -1,0 +1,62 @@
+@startuml
+skin rose
+cloud "云服务器/数据中心" as cloud {
+    node "Web 服务器" as web
+    node "应用服务器" as app
+    database "数据库服务器" as db
+    node "题库服务器" as question_bank
+    node "缓存服务器" as cache
+    node "文件服务器" as file
+}
+
+node "Internet" as internet
+
+node "移动端" as mobile {
+        component "移动设备" as mobile_device {
+        component "移动浏览器" as mobile_browser
+    }
+}
+
+node "PC 端" as pc {
+        component "PC" as pc_device {
+        component "Web 浏览器" as pc_browser
+    }
+}
+
+node "本地服务器" as local_server {
+    node "本地应用服务器" as local_app
+    database "本地数据库" as local_db
+}
+
+internet --> mobile
+internet --> pc
+internet --> local_server
+
+mobile_browser --> web : HTTP/HTTPS
+pc_browser --> web : HTTP/HTTPS
+
+local_app --> app : 内部网络
+local_db --> db : 数据同步
+
+actor "学生" as student
+student --> mobile_browser : 使用
+student --> pc_browser : 使用
+
+actor "教师" as teacher
+teacher --> mobile_browser : 使用
+teacher --> pc_browser : 使用
+
+actor "管理员" as admin
+admin --> mobile_browser : 使用
+admin --> pc_browser : 使用
+
+student --> app : 提交答案
+teacher --> app : 管理题库
+admin --> app : 管理用户和数据
+
+app --> db : 数据存储
+app --> question_bank : 题库管理
+app --> cache : 缓存访问
+app --> file : 文件操作
+
+@enduml

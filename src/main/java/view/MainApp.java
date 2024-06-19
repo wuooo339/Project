@@ -16,7 +16,7 @@ public class MainApp extends Application {
 
         // Start with the login view
         LoginView loginView = new LoginView(primaryStage, userController,questionController);
-        Scene loginScene = new Scene(loginView, 400, 300);
+        Scene loginScene = new Scene(loginView, 600, 400);
 
         primaryStage.setScene(loginScene);
         primaryStage.show();

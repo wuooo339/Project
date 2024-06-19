@@ -59,7 +59,7 @@ public class RegisterView extends GridPane {
             if (success) {
                 showMessage("注册成功！" + username);
                 PauseTransition delay = new PauseTransition(Duration.seconds(1));
-                delay.setOnFinished(event -> primaryStage.setScene(new Scene(new LoginView(primaryStage, userController, questionController), 400, 300)));
+                delay.setOnFinished(event -> primaryStage.setScene(new Scene(new LoginView(primaryStage, userController, questionController), 600, 400)));
                 delay.play();
             } else {
                 showMessage("注册失败，请重试。");

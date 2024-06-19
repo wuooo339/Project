@@ -10,10 +10,13 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.*;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import model.Exam;
+import model.Question;
+
 import java.text.DecimalFormat;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
@@ -27,9 +30,10 @@ public class ViewScoresView extends VBox {
     private ComboBox<String> subjectComboBox;
     private VBox scoresBox;
     private boolean isTeacher;
-
+    private Stage primaryStage;
     public ViewScoresView(Stage primaryStage, String username, ExamController examController, QuestionController questionController, UserController userController, boolean isTeacher) {
         this.examController = examController;
+        this.primaryStage = primaryStage;
         this.questionController = questionController;
         this.userController = userController;
         this.isTeacher = isTeacher;
@@ -45,6 +49,8 @@ public class ViewScoresView extends VBox {
         scoresBox = new VBox(10);
         scrollPane.setContent(scoresBox);
         VBox.setVgrow(scrollPane, Priority.ALWAYS);
+        scrollPane.setFitToWidth(true); // Ensure the scroll pane fits the width
+        scrollPane.setPrefHeight(600);
 
         showScoresButton.setOnAction(e -> {
             String subject = subjectComboBox.getValue();
@@ -83,8 +89,12 @@ public class ViewScoresView extends VBox {
             for (Exam exam : exams) {
                 exam.recalculateScore();
                 String formattedDateTime = exam.getTime().format(formatter);
+                HBox scoreBox = new HBox(10); // 每次循环都创建一个新的 HBox
                 Label scoreLabel = new Label("科目: " + exam.getSubject() + " 成绩: " + exam.getScore() + " 时间: " + formattedDateTime);
-                scoresBox.getChildren().add(scoreLabel);
+                Button viewMistakesButton = new Button("查看错题");
+                viewMistakesButton.setOnAction(event -> showMistakes(primaryStage, username ,exam,isTeacher));
+                scoreBox.getChildren().addAll(scoreLabel, viewMistakesButton);
+                scoresBox.getChildren().add(scoreBox);
             }
         }
     }
@@ -101,10 +111,15 @@ public class ViewScoresView extends VBox {
             for (Exam exam : exams) {
                 exam.recalculateScore();
                 String formattedDateTime = exam.getTime().format(formatter);
-                Label scoreLabel = new Label("学生: " + exam.getStudentUsername() + " 成绩: " + exam.getScore() + " 时间: " + formattedDateTime);
-                scoresBox.getChildren().add(scoreLabel);
+                HBox scoreBox = new HBox(10); // 每次循环都创建一个新的 HBox
+                Label scoreLabel = new Label("科目: " + exam.getSubject() + " 成绩: " + exam.getScore() + " 时间: " + formattedDateTime);
+                Button viewMistakesButton = new Button("查看错题");
+                viewMistakesButton.setOnAction(event -> showMistakes(primaryStage, exam.getStudentUsername(),exam,isTeacher));
+                scoreBox.getChildren().addAll(scoreLabel, viewMistakesButton);
+                scoresBox.getChildren().add(scoreBox);
             }
         }
+
     }
 
     private BarChart<String, Number> createBarChart() {
@@ -127,6 +142,50 @@ public class ViewScoresView extends VBox {
         pieChart.setTitle("各科目成绩分析");
 
         return pieChart;
+    }
+    private void showMistakes(Stage primaryStage,String username,Exam exam,boolean isTeacher) {
+        VBox mistakesBox = new VBox(10);
+        mistakesBox.setPadding(new Insets(10, 10, 10, 10));
+        List<Question> questions = exam.getQuestions();
+        List<String> answers = exam.getAnswers();
+
+        for (int i = 0; i < questions.size(); i++) {
+            Question question = questions.get(i);
+            String studentAnswer = answers.get(i);
+            boolean isCorrect = question.checkAnswer(studentAnswer);
+            String correctAnswer = question.getCorrectAnswer();
+
+            Label questionLabel = new Label("题目: " + question.getQuestionText());
+            Label studentAnswerLabel = new Label("学生答案: " + studentAnswer);
+            Label correctAnswerLabel = new Label("正确答案: " + correctAnswer);
+
+            if (isCorrect) {
+                studentAnswerLabel.setStyle("-fx-text-fill: green;");
+            } else {
+                studentAnswerLabel.setStyle("-fx-text-fill: red;");
+            }
+
+            mistakesBox.getChildren().addAll(questionLabel, studentAnswerLabel, correctAnswerLabel, new Separator());
+        }
+
+        ScrollPane scrollPane = new ScrollPane();
+        scrollPane.setContent(mistakesBox);
+        scrollPane.setFitToWidth(true);
+        VBox.setVgrow(scrollPane, Priority.ALWAYS);
+
+        Button backButton = new Button("返回");
+        if(isTeacher)
+        {
+            backButton.setOnAction(e -> primaryStage.setScene(new Scene(new ViewScoresView(primaryStage, exam.getStudent(), examController, questionController, userController, true), 800, 600)));
+        }
+        else {
+            backButton.setOnAction(e -> primaryStage.setScene(new Scene(new ViewScoresView(primaryStage, exam.getStudent(), examController, questionController, userController, false), 800, 600)));
+        }
+        VBox container = new VBox(10, scrollPane, backButton);
+        container.setPadding(new Insets(10, 10, 10, 10));
+
+        Scene mistakesScene = new Scene(container, 900, 600);
+        primaryStage.setScene(mistakesScene);
     }
 
     private void analyzeScores(PieChart pieChart, BarChart<String, Number> barChart, String username) {
