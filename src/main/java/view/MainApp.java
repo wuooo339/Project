@@ -6,9 +6,9 @@ import javafx.stage.Stage;
 
 public class MainApp extends Application {
 
-    private static UserController userController = new UserController();
-    private static QuestionController questionController = new QuestionController();
-    private static ExamController examController = new ExamController();
+    private static final UserController userController = new UserController();
+    private static final QuestionController questionController = new QuestionController();
+    private static final ExamController examController = new ExamController();
 
     @Override
     public void start(Stage primaryStage) {
@@ -29,6 +29,7 @@ public class MainApp extends Application {
     public static UserController getUserController() {
         return userController;
     }
+
     public static QuestionController getQuestionController() {
         return questionController;
     }

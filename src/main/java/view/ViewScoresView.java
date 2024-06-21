@@ -24,13 +24,13 @@ import java.util.List;
 import java.util.Map;
 
 public class ViewScoresView extends VBox {
-    private ExamController examController;
-    private QuestionController questionController;
-    private UserController userController;
-    private ComboBox<String> subjectComboBox;
-    private VBox scoresBox;
-    private boolean isTeacher;
-    private Stage primaryStage;
+    private final ExamController examController;
+    private final QuestionController questionController;
+    private final UserController userController;
+    private final ComboBox<String> subjectComboBox;
+    private final VBox scoresBox;
+    private final boolean isTeacher;
+    private final Stage primaryStage;
     public ViewScoresView(Stage primaryStage, String username, ExamController examController, QuestionController questionController, UserController userController, boolean isTeacher) {
         this.examController = examController;
         this.primaryStage = primaryStage;
@@ -64,9 +64,9 @@ public class ViewScoresView extends VBox {
         Button backButton = new Button("返回");
         backButton.setOnAction(e -> {
             if (isTeacher) {
-                primaryStage.setScene(new Scene(new view.ProfessorView(primaryStage, questionController, userController), 900, 600));
+                primaryStage.setScene(new Scene(new view.ProfessorView(primaryStage, questionController, userController), 600, 400));
             } else {
-                primaryStage.setScene(new Scene(new view.StudentView(primaryStage, username, questionController, userController), 900, 600));
+                primaryStage.setScene(new Scene(new view.StudentView(primaryStage, username, questionController, userController), 600, 400));
             }
         });
 

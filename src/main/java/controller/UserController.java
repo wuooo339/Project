@@ -5,7 +5,7 @@ import model.*;
 import java.util.List;
 
 public class UserController {
-    private UserService userService = new UserService();
+    private final UserService userService = new UserService();
 
     public boolean register(String username, String password, String role) {
         User user = new User(username, password, role);

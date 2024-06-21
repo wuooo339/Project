@@ -10,11 +10,9 @@ import controller.*;
 import model.*;
 
 public class ManageExamsView extends VBox {
-    private ExamController examController;
-    private ListView<Exam> examListView;
+    private final ListView<Exam> examListView;
 
     public ManageExamsView(Stage primaryStage, ExamController examController) {
-        this.examController = examController;
         setPadding(new Insets(10, 10, 10, 10));
         setSpacing(10);
 

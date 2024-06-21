@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class ExamService {
-    private ExamDao examDao = new ExamDao();
+    private final ExamDao examDao = new ExamDao();
     // Add exam
     public void addExam(Exam exam) {
         examDao.addExam(exam);

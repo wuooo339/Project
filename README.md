@@ -24,7 +24,7 @@
 建议测试步骤如下
 
     1. 注册 professor 并登录(可以用回车)
-    2. 从 `main/resources/problem.csv` 导入数据
+    2. 从 `main/resources/problem-ch.csv` 导入数据(注意带ch后缀是中文题目)
     3. 录入单个题目测试
     4. 查看题目
     5. 教师端查看成绩并查看分析结果
@@ -65,3 +65,15 @@ _20240613_
 _20240619_
 
 更好看的登录界面、学生、管理员和教师界面，增加错题查看功能，可以查看错题和正确答案，其中错题会标红。*tips*——可以使用回车登录
+
+_20240621_
+
+用户界面图标、动画显示，完善取消注册退出功能，增加考试每道题2min计时，增加中文题库
+<table>
+    <tr>
+        <td><img src="./src/main/resources/show/loginview.png" alt="Admin View" width="200"/></td>
+        <td><img src="./src/main/resources/show/studentview.png" alt="Student View" width="200"/></td>
+        <td><img src="./src/main/resources/show/professorview.png" alt="Professor View" width="200"/></td>
+        <td><img src="./src/main/resources/show/adminview.png" alt="Admin View" width="200"/></td>
+    </tr>
+</table>

@@ -8,8 +8,8 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.Random;
 
-import model.Question;
 public class QuestionDao {
     private static final String FILE_PATH = "src/main/resources/questions.dat";
     private List<Question> questions;
@@ -71,11 +71,32 @@ public class QuestionDao {
         return new ArrayList<>();
     }
 
+
+
     public List<Question> findBySubjectAndDifficulty(String subject, int difficulty, int limit) {
-        return questions.stream()
+        // 先过滤出符合科目和难度的题目
+        List<Question> filteredQuestions = questions.stream()
                 .filter(question -> question.getSubject().equals(subject) && question.getDifficulty() == difficulty)
-                .limit(limit)
                 .collect(Collectors.toList());
+
+        // 如果符合条件的题目数量小于限制数量,直接返回
+        if (filteredQuestions.size() <= limit) {
+            return filteredQuestions;
+        }
+        // 创建一个随机数生成器
+        Random random = new Random();
+        // 创建一个列表用于存储随机选取的题目
+        List<Question> randomQuestions = new ArrayList<>();
+        // 随机选取题目,直到达到限制数量
+        while (randomQuestions.size() < limit) {
+            int randomIndex = random.nextInt(filteredQuestions.size());
+            Question randomQuestion = filteredQuestions.get(randomIndex);
+            if (!randomQuestions.contains(randomQuestion)) {
+                randomQuestions.add(randomQuestion);
+            }
+        }
+
+        return randomQuestions;
     }
 
 }
