@@ -5,11 +5,10 @@ import model.User;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 public class UserService {
-    private UserDao userDao = new UserDao();
+    private final UserDao userDao = new UserDao();
 
     public boolean register(User user) {
         return userDao.save(user);

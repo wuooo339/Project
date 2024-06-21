@@ -10,11 +10,9 @@ import controller.*;
 import model.Question;
 
 public class ManageQuestionsView extends VBox {
-    private QuestionController questionController;
-    private ListView<Question> questionListView;
+    private final ListView<Question> questionListView;
 
     public ManageQuestionsView(Stage primaryStage, QuestionController questionController) {
-        this.questionController = questionController;
         setPadding(new Insets(10, 10, 10, 10));
         setSpacing(10);
 

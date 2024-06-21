@@ -1,0 +1,346 @@
+subject,type,questionText,options,correctAnswer,difficulty
+Math,choice,"2+2=?","2|3|4|5",4,1
+Math,blank,"5+______=10",,5,1
+Math,choice,"3*3=?","6|7|8|9",9,1
+Math,blank,"10-______=5",,5,1
+Math,choice,"10/2=?","4|5|6|7",5,1
+Math,blank,"15-______=10",,5,1
+Math,choice,"1+1=?","1|2|3|4",2,1
+Math,blank,"8-______=3",,5,1
+Math,choice,"6/3=?","1|2|3|4",2,1
+Math,blank,"12-______=7",,5,1
+Math,choice,"2*2=?","2|3|4|5",4,1
+Math,blank,"9-______=4",,5,1
+Math,choice,"5+3=?","6|7|8|9",8,1
+Math,blank,"7-______=2",,5,1
+Math,choice,"8/4=?","1|2|3|4",2,1
+Math,blank,"14-______=9",,5,1
+Math,choice,"9-3=?","3|4|5|6",6,1
+Math,blank,"11-______=6",,5,1
+Math,choice,"7+2=?","7|8|9|10",9,1
+Math,blank,"6-______=1",,5,1
+Math,choice,"15/3=?","3|4|5|6",5,2
+Math,blank,"20-______=10",,10,2
+Math,choice,"4*4=?","12|14|16|18",16,2
+Math,blank,"25-______=15",,10,2
+Math,choice,"6*3=?","16|18|20|22",18,2
+Math,blank,"30-______=20",,10,2
+Math,choice,"8+7=?","13|14|15|16",15,2
+Math,blank,"35-______=25",,10,2
+Math,choice,"9*2=?","16|18|20|22",18,2
+Math,blank,"40-______=30",,10,2
+Math,choice,"10-4=?","5|6|7|8",6,2
+Math,blank,"45-______=35",,10,2
+Math,choice,"12/4=?","2|3|4|5",3,2
+Math,blank,"50-______=40",,10,2
+Math,choice,"14+3=?","16|17|18|19",17,2
+Math,blank,"55-______=45",,10,2
+Math,choice,"15-5=?","7|8|9|10",10,2
+Math,blank,"60-______=50",,10,2
+Math,choice,"20/4=?","3|4|5|6",5,2
+Math,blank,"65-______=55",,10,2
+Math,choice,"25-10=?","13|14|15|16",15,2
+Math,blank,"70-______=60",,10,2
+Math,choice,"30/5=?","4|5|6|7",6,2
+Math,blank,"75-______=65",,10,2
+Math,choice,"35-15=?","18|19|20|21",20,2
+Math,blank,"80-______=70",,10,2
+Math,blank,"圆的面积公式是 π × r^______",,2,3
+Math,choice,"以下哪个是质数？","2|6|11|15",11,3
+Math,choice,"3^4 的值是多少？","81|27|12|64",81,3
+Math,choice,"如果 x = 3 且 y = 5，那么 2x + 3y 的值是多少？","21|25|29|33",29,3
+Math,choice,"以下哪个是一个四边形？","Circle|Triangle|Rectangle|Sphere",Rectangle,3
+Math,blank,"三角形的内角和是______度。",,180,3
+Math,blank,"π（圆周率）的两位小数值是______。",,3.14,3
+Math,blank,"49的平方根是______。",,7,3
+Math,blank,"如果 a = 5 且 b = 3，那么 a^2 + b^2 等于______。",,34,3
+Math,blank,"圆周率是多少______?",,"3.14",3
+
+History,choice,"美国的第一任总统是谁______？","Washington|Lincoln|Jefferson|Adams",Washington,1
+History,blank,"1776年之所以重要是因为______。",,《独立宣言》,1
+History,choice,"谁发现了美洲______？","Columbus|Vespucci|Magellan|Cook",Columbus,1
+History,blank,"罗马帝国在公元______年灭亡。",,476,1
+History,choice,"谁被称为奥尔良的少女______？","Joan of Arc|Catherine|Elizabeth|Marie",Joan of Arc,1
+History,blank,"《大宪章》在______年签署。",,1215,1
+History,choice,"二战期间的英国首相是谁______？","Churchill|Attlee|Thatcher|Blair",Churchill,1
+History,blank,"拿破仑被流放到______岛。",,Elba,1
+History,choice,"第一个登上月球的人是谁？","Armstrong|Aldrin|Glenn|Gagarin",Armstrong,1
+History,blank,"黑斯廷斯战役发生在______年。",,1066,1
+History,choice,"谁写了《伊利亚特》和《奥德赛》？","Homer|Virgil|Ovid|Sophocles",Homer,1
+History,blank,"柏林墙倒塌于______年。",,1989,1
+History,choice,"中国的第一个皇帝是谁______？","Qin Shi Huang|Han Gaozu|Wu Zetian|Tang Taizong",Qin Shi Huang,1
+History,blank,"泰坦尼克号沉没于______年。",,1912,1
+History,choice,"谁发现了青霉素______？","Fleming|Pasteur|Salk|Jenner",Fleming,1
+History,blank,"工业革命始于______年。",,1760,1
+History,choice,"二战期间苏联的领导人是谁______？","Stalin|Lenin|Khrushchev|Brezhnev",Stalin,1
+History,blank,"大萧条始于______年。",,1929,1
+History,choice,"英国的第一位女性首相是谁______？","Thatcher|May|Merkel|Clinton",Thatcher,1
+History,blank,"美国内战于______年结束。",,1865,1
+History,choice,"被称为铁娘子的是谁______？","Thatcher|Clinton|May|Merkel",Thatcher,2
+History,blank,"法国大革命始于______年。",,1789,2
+History,choice,"美国第一位非洲裔总统是谁______？","Obama|Bush|Clinton|Lincoln",Obama,2
+History,blank,"柏林墙建于______年。",,1961,2
+History,choice,"蒙古帝国的创始人是谁______？","Genghis Khan|Kublai Khan|Timur|Babur",Genghis Khan,2
+History,blank,"第一个绕地球轨道飞行的人是______。",,Gagarin,2
+History,choice,"第一位独自飞越大西洋的女性是谁______？","Earhart|Johnson|Bach|Blair",Earhart,2
+History,blank,"莱特兄弟在______年首次飞行飞机。",,1903,2
+History,choice,"《共产党宣言》是谁写的______？","Marx|Engels|Lenin|Stalin",Marx,2
+History,blank,"《凡尔赛和约》签署于______年。",,1919,2
+History,choice,"英国在位时间最长的君主是谁______？","Elizabeth II|Victoria|George III|Henry VIII",Elizabeth II,2
+History,blank,"美国内战始于______年。",,1861,2
+History,choice,"美国独立战争期间的英国国王是谁______？","George III|Henry VIII|Edward I|Richard III",George III,2
+History,blank,"《独立宣言》签署于______年。",,1776,2
+History,choice,"发现万有引力定律的是谁______？","Newton|Galileo|Kepler|Einstein",Newton,2
+History,blank,"滑铁卢战役发生在______年。",,1815,2
+History,choice,"南非第一位总统是谁______？","Mandela|Mbeki|Zuma|De Klerk",Mandela,2
+History,blank,"黑死病发生在______年。",,1347,2
+History,choice,"印度独立运动的领袖是谁______？","Gandhi|Nehru|Patel|Jinnah",Gandhi,2
+History,blank,"俄国革命始于______年。",,1917,2
+History,choice,"罗马的第一位皇帝是谁______？","Augustus|Julius Caesar|Nero|Caligula",Augustus,2
+History,blank,"文艺复兴始于______世纪。",,14,2
+History,blank,"美国内战是在什么和什么之间进行的______。",,北方和南方,3
+History,blank,"文艺复兴时期始于______世纪。",,14,3
+History,blank,"吉萨金字塔是在______建造的。",,埃及,3
+History,blank,"第一次世界大战始于______年。",,1914,3
+History,blank,"罗马帝国的衰落发生在______年。",,476,3
+History,choice,"美国的第一任总统是谁______？","George Washington|Thomas Jefferson|Abraham Lincoln|John Adams",George Washington,3
+History,choice,"建造中国长城的古代文明是______？","Egyptians|Romans|Greeks|Chinese",Chinese,3
+History,choice,"第二次世界大战结束于哪一年______？","1939|1941|1945|1948",1945,3
+History,choice,"哪个事件标志着法国大革命的开始______？","Storming of the Bastille|Reign of Terror|Napoleonic Wars|Treaty of Versailles",Storming of the Bastille,3
+History,choice,"二战期间苏联的领导人是谁______？","Joseph Stalin|Vladimir Lenin|Nikita Khrushchev|Mikhail Gorbachev",Joseph Stalin,3
+
+Science,choice,"水的化学符号是什么______？","H2O|CO2|O2|H2",H2O,1
+Science,blank,"地球围绕什么旋转______？",,太阳,1
+Science,choice,"光速是多少______？","299792 km/s|150000 km/s|108000 km/s|384400 km/s",299792 km/s,1
+Science,blank,"植物通过什么将阳光转化为能量______？",,光合作用,1
+Science,choice,"水的沸点是多少摄氏度______？","100°C|90°C|80°C|110°C",100°C,1
+Science,blank,"人体有多少块骨头______？",,206,1
+Science,choice,"盐的化学式是什么______？","NaCl|KCl|MgCl2|CaCl2",NaCl,1
+Science,blank,"地球大气中的主要气体是什么______？",,氮气,1
+Science,choice,"哪个星球被称为红色星球______？","Mars|Venus|Jupiter|Saturn",Mars,1
+Science,blank,"细胞分裂的过程被称为什么______？",,有丝分裂,1
+Science,choice,"宇宙中最丰富的元素是什么？","Hydrogen|Oxygen|Carbon|Helium",Hydrogen,1
+Science,blank,"水在多少摄氏度下结冰______？",,0,1
+Science,choice,"人体最大的器官是什么？","Skin|Liver|Heart|Lungs",Skin,1
+Science,blank,"让我们留在地面上的力叫什么______？",,重力,1
+Science,choice,"生命的基本单位是什么？","Cell|Atom|Molecule|Organ",Cell,1
+Science,blank,"植物制造食物的过程叫什么______？",,光合作用,1
+Science,choice,"光合作用期间植物吸收的气体是什么？","Carbon dioxide|Oxygen|Nitrogen|Hydrogen",Carbon dioxide,1
+Science,blank,"细胞的动力站是什么______？",,线粒体,1
+Science,choice,"地球上最硬的天然物质是什么？","Diamond|Gold|Iron|Silver",Diamond,1
+Science,blank,"银河系是一种什么______？",,星系,1
+Science,choice,"地球大气中第二大丰富的气体是什么？","Oxygen|Nitrogen|Carbon dioxide|Argon",Oxygen,2
+Science,blank,"葡萄糖的化学式是什么______？",,C6H12O6,2
+Science,choice,"我们太阳系中最大的行星是什么？","Jupiter|Saturn|Uranus|Neptune",Jupiter,2
+Science,blank,"水变成蒸汽的过程叫什么______？",,蒸发,2
+Science,choice,"金的化学符号是什么？","Au|Ag|Pb|Fe",Au,2
+Science,blank,"电流的单位是什么______？",,安培,2
+Science,choice,"水在华氏度多少度沸腾？","212°F|100°F|180°F|200°F",212°F,2
+Science,blank,"原子的中心被称为什么______？",,原子核,2
+Science,choice,"被称为晨星的行星是？","Venus|Mars|Mercury|Jupiter",Venus,2
+Science,blank,"元素周期表是由谁创建的______？",,门捷列夫,2
+Science,choice,"地球大气中最丰富的气体是什么？","Nitrogen|Oxygen|Carbon dioxide|Helium",Nitrogen,2
+Science,blank,"固体直接变成气体的过程叫什么______？",,升华,2
+Science,choice,"地球大气中主要的气体是什么？","Nitrogen|Oxygen|Carbon dioxide|Helium",Nitrogen,2
+Science,blank,"我们太阳系中最大的行星是______？",,木星,2
+Science,choice,"地球大气中最主要的气体是什么？","Nitrogen|Oxygen|Carbon dioxide|Helium",Nitrogen,2
+Science,blank,"二氧化碳的化学式是什么______？",,CO2,2
+Science,choice,"氧气的化学符号是什么？","O|O2|Ox|O3",O2,2
+Science,blank,"食盐的化学式是什么______？",,NaCl,2
+Science,choice,"细胞的动力站是什么？","Mitochondria|Nucleus|Ribosome|Lysosome",Mitochondria,2
+Science,blank,"生命的最小单位是什么______？",,细胞,2
+Science,choice,"光合作用期间植物吸收的气体是什么？","Carbon dioxide|Oxygen|Nitrogen|Hydrogen",Carbon dioxide,2
+Science,blank,"地球大气中主要的气体是什么______？",,氮气,2
+Science,choice,"氢的化学符号是什么？","H|H2|Hy|H3",H2,2
+Science,blank,"电流的单位是什么______？",,安培,2
+Science,blank,"绿色植物制造自己食物的过程叫什么______？",,光合作用,3
+Science,blank,"电流的单位是______。",,安培,3
+Science,blank,"钠的化学符号是什么______？",,Na,3
+Science,blank,"解释宇宙起源的理论被称为______理论。",,大爆炸,3
+Science,blank,"用氧气燃烧物质的过程叫做______。",,燃烧,3
+Science,choice,"以下哪个是可再生能源？","煤炭|天然气|风能|汽油",风能,3
+Science,choice,"水从液体变成气体的过程叫什么？","蒸发|凝结|升华|降水",蒸发,3
+Science,choice,"以下哪个是一个化合物？","氧气|氢气|水|氮气",水,3
+Science,choice,"以下哪个是物质的物理属性？","颜色|密度|味道|化学组成",密度,3
+Science,choice,"吸引物体彼此之间的力叫什么？","重力|摩擦力|磁力|浮力",重力,3
+
+Geography,choice,"法国的首都是哪里______？","Paris|London|Berlin|Madrid",Paris,1
+Geography,blank,"地球上最大的海洋是______。",,太平洋,1
+Geography,choice,"世界上最长的河流是什么______？","Nile|Amazon|Yangtze|Mississippi",Nile,1
+Geography,blank,"珠穆朗玛峰位于______。",,尼泊尔,1
+Geography,choice,"世界上最小的国家是哪一个______？","Vatican City|Monaco|Nauru|San Marino",Vatican City,1
+Geography,blank,"撒哈拉沙漠位于______。",,非洲,1
+Geography,choice,"面积最大的国家是哪一个______？","Russia|Canada|USA|China",Russia,1
+Geography,blank,"大堡礁位于______。",,澳大利亚,1
+Geography,choice,"世界上人口最多的国家是哪一个______？","China|India|USA|Indonesia",China,1
+Geography,blank,"安第斯山脉位于______。",,南美洲,1
+Geography,choice,"日本的首都是哪里______？","Tokyo|Kyoto|Osaka|Nagoya",Tokyo,1
+Geography,blank,"亚马逊雨林位于______。",,巴西,1
+Geography,choice,"非洲最高的山峰是哪一座______？","Kilimanjaro|Everest|Elbrus|Aconcagua",Kilimanjaro,1
+Geography,blank,"尼罗河流入______。",,地中海,1
+Geography,choice,"加拿大的首都是哪里______？","Ottawa|Toronto|Vancouver|Montreal",Ottawa,1
+Geography,blank,"世界上最大的沙漠是______。",,南极洲沙漠,1
+Geography,choice,"意大利的首都是哪里______？","Rome|Milan|Florence|Venice",Rome,1
+Geography,blank,"美国最长的河流是哪一条______？",,密苏里河,1
+Geography,choice,"澳大利亚的首都是哪里______？","Canberra|Sydney|Melbourne|Perth",Canberra,1
+Geography,blank,"世界上面积最大的湖泊是______。",,里海,1
+Geography,choice,"西班牙的首都是哪里______？","Madrid|Barcelona|Valencia|Seville",Madrid,2
+Geography,blank,"中国的万里长城位于______。",,中国,2
+Geography,choice,"俄罗斯的首都是哪里______？","Moscow|Saint Petersburg|Novosibirsk|Yekaterinburg",Moscow,2
+Geography,blank,"世界上最高的山峰是______。",,珠穆朗玛峰,2
+Geography,choice,"世界上面积最大的大洲是哪一个______？","Asia|Africa|North America|South America",Asia,2
+Geography,blank,"亚马逊河位于______。",,南美洲,2
+Geography,choice,"世界上面积最小的大洲是哪一个______？","Australia|Europe|Antarctica|South America",Australia,2
+Geography,blank,"世界上最大的岛屿是______。",,格陵兰岛,2
+Geography,choice,"德国的首都是哪里______？","Berlin|Munich|Hamburg|Frankfurt",Berlin,2
+Geography,blank,"非洲最长的河流是哪一条______？",,尼罗河,2
+Geography,choice,"中国的首都是哪里______？","Beijing|Shanghai|Hong Kong|Guangzhou",Beijing,2
+Geography,blank,"美国最大的城市是______。",,纽约,2
+Geography,choice,"印度的首都是哪里______？","New Delhi|Mumbai|Kolkata|Chennai",New Delhi,2
+Geography,blank,"亚洲最长的河流是哪一条______？",,长江,2
+Geography,choice,"巴西的首都是哪里______？","Brasilia|Rio de Janeiro|Sao Paulo|Salvador",Brasilia,2
+Geography,blank,"南美洲最高的山峰是哪一座______？",,阿空加瓜山,2
+Geography,choice,"英国的首都是哪里______？","London|Edinburgh|Cardiff|Belfast",London,2
+Geography,blank,"加拿大最大的城市是______。",,多伦多,2
+Geography,choice,"埃及的首都是哪里______？","Cairo|Alexandria|Giza|Luxor",Cairo,2
+Geography,blank,"欧洲最长的河流是哪一条______？",,伏尔加河,2
+Geography,choice,"南非的首都是哪里______？","Pretoria|Johannesburg|Cape Town|Durban",Pretoria,2
+Geography,blank,"欧洲最高的山峰是哪一座______？",,厄尔布鲁士山,2
+Geography,choice,"墨西哥的首都是哪里______？","Mexico City|Guadalajara|Monterrey|Tijuana",Mexico City,2
+Geography,blank,"非洲最大的沙漠是______。",,撒哈拉,2
+Geography,blank,"世界上最大的洋是______洋。",,太平洋,3
+Geography,blank,"赤道是一条假想线，将地球分为______和什么半球。",,北半球和南半球,3
+Geography,blank,"亚马逊河流经的国家是______。",,巴西,3
+Geography,blank,"澳大利亚的首都城市是______。",,堪培拉,3
+Geography,blank,"世界上最高的山峰是______。",,珠穆朗玛峰,3
+Geography,choice,"以下哪个国家是内陆国家______？","Australia|Japan|Switzerland|Brazil",Switzerland,3
+Geography,choice,"以下哪个是沙漠______？","Sahara|Mississippi|Everglades|Amazon",Sahara,3
+Geography,choice,"世界上最大的大洲叫什么名字______？","Asia|Africa|North America|Europe",Asia,3
+Geography,choice,"以下哪个是半岛______？","Hawaii|Greenland|Iceland|Malta",Malta,3
+Geography,choice,"以下哪个是海峡______？","Nile|English Channel|Everest|Andes",English Channel,3
+
+English,choice,What is the synonym of 'big'?,large|small|tiny|huge, large, 1
+English,blank,A ______ is used to end a sentence.,,period,1
+English,choice,What is the antonym of 'happy'?,sad|joyful|angry|excited, sad, 1
+English,blank,The past tense of 'run' is ______.,,ran,1
+English,choice,What is the synonym of 'fast'?,quick|slow|steady|calm, quick, 1
+English,blank,The plural of 'child' is ______.,,children,1
+English,choice,What is the antonym of 'hot'?,cold|warm|cool|lukewarm, cold, 1
+English,blank,A ______ is used to ask a question.,,question mark,1
+English,choice,What is the synonym of 'smart'?,intelligent|dumb|stupid|foolish, intelligent, 1
+English,blank,The past tense of 'eat' is ______.,,ate,1
+English,choice,What is the antonym of 'new'?,old|fresh|recent|modern, old, 1
+English,blank,The plural of 'foot' is ______.,,feet,1
+English,choice,What is the synonym of 'easy'?,simple|hard|difficult|tough, simple, 1
+English,blank,A ______ is used to show excitement.,,exclamation mark,1
+English,choice,What is the antonym of 'light'?,heavy|bright|shiny|luminous, heavy, 1
+English,blank,The past tense of 'give' is ______.,,gave,1
+English,choice,What is the synonym of 'thin'?,slim|fat|thick|wide, slim, 1
+English,blank,The plural of 'tooth' is ______.,,teeth,1
+English,choice,What is the antonym of 'young'?,old|new|fresh|recent, old, 1
+English,blank,A ______ is used to show possession.,,apostrophe,1
+English,choice,What is the synonym of 'begin'?,start|end|finish|conclude, start, 2
+English,blank,The past tense of 'come' is ______.,,came,2
+English,choice,What is the antonym of 'hard'?,soft|firm|solid|stiff, soft, 2
+English,blank,The plural of 'man' is ______.,,men,2
+English,choice,What is the synonym of 'angry'?,mad|calm|happy|pleased, mad, 2
+English,blank,A ______ is used to join two words together.,,hyphen,2
+English,choice,What is the antonym of 'noisy'?,quiet|loud|shrill|boisterous, quiet, 2
+English,blank,The past tense of 'see' is ______.,,saw,2
+English,choice,What is the synonym of 'beautiful'?,pretty|ugly|plain|ordinary, pretty, 2
+English,blank,The plural of 'mouse' is ______.,,mice,2
+English,choice,What is the antonym of 'big'?,small|huge|enormous|large, small, 2
+English,blank,A ______ is used to separate items in a list.,,comma,2
+English,choice,What is the synonym of 'small'?,tiny|large|big|huge, tiny, 2
+English,blank,The past tense of 'drink' is ______.,,drank,2
+English,choice,What is the antonym of 'sweet'?,bitter|sour|salty|savory, bitter, 2
+English,blank,The plural of 'goose' is ______.,,geese,2
+English,choice,What is the synonym of 'rich'?,wealthy|poor|needy|destitute, wealthy, 2
+English,blank,A ______ is used to indicate a pause.,,comma,2
+English,choice,What is the antonym of 'clean'?,dirty|tidy|neat|orderly, dirty, 2
+English,blank,The past tense of 'write' is ______.,,wrote,2
+English,choice,What is the synonym of 'happy'?,joyful|sad|angry|excited, joyful, 2
+English,blank,The plural of 'sheep' is ______.,,sheep,2
+English,choice,What is the antonym of 'full'?,empty|complete|filled|stuffed, empty, 2
+English,blank,A ______ is used to show a direct quote.,,quotation mark,2
+English,blank,The past tense of the verb "go" is ______.,,went,3
+English,blank,A word that is opposite in meaning to another word is called an ______.,,antonym,3
+English,blank,The study of the structure and meaning of words is called ______.,,etymology,3
+English,blank,A ______ is a group of words that express a complete thought.,,sentence,3
+English,blank,A ______ is a figure of speech that makes a comparison between two things without using "like" or "as.",,metaphor,3
+English,choice,Which of the following is a preposition?,"And|But|From|Why",From,3
+English,choice,Which of the following is an example of an adverb?,"Quickly|Book|Laugh|Table",Quickly,3
+English,choice,What is the correct way to spell the plural of "box"?,"Boxs|Boxez|Boxes|Boxies",Boxes,3
+English,choice,Which of the following is a verb?,"Apple|Run|Red|Because",Run,3
+English,choice,Which of the following is a synonym for "intelligent"?,"Foolish|Clever|Lazy|Angry",Clever,3
+
+Computer,choice,"CPU代表什么______？","Central Processing Unit|Central Programming Unit|Computer Personal Unit|Central Processor Unit",Central Processing Unit,1
+Computer,blank,"用于输入文本的设备是______。",,键盘,1
+Computer,choice,"RAM代表什么？","Random Access Memory|Read Access Memory|Run Access Memory|Read And Memory",Random Access Memory,1
+Computer,blank,"计算机的大脑是______。",,CPU,1
+Computer,choice,"操作系统的主要功能是什么______？","Manage hardware and software|Run applications|Provide entertainment|Store data",Manage hardware and software,1
+Computer,blank,"用于浏览互联网的软件被称为______。",,浏览器,1
+Computer,choice,"HTML代表什么______？","HyperText Markup Language|HyperText Making Language|HyperTool Markup Language|HyperLink Markup Language",HyperText Markup Language,1
+Computer,blank,"用于传输网页的协议是______。",,HTTP,1
+Computer,choice,"LAN代表什么______？","Local Area Network|Long Area Network|Local Access Network|Large Area Network",Local Area Network,1
+Computer,blank,"网络的主要语言是______。",,HTML,1
+Computer,choice,"SSD代表什么______？","Solid State Drive|Solid State Disk|Solid Storage Drive|Solid Storage Disk",Solid State Drive,1
+Computer,blank,"计算机的永久存储是______。",,硬盘,1
+Computer,choice,"防火墙的主要功能是什么______？","Protect against unauthorized access|Run applications|Store data|Provide entertainment",Protect against unauthorized access,1
+Computer,blank,"用于本地通信的网络是______。",,局域网,1
+Computer,choice,"USB代表什么？","Universal Serial Bus|Universal System Bus|Universal Storage Bus|Universal Service Bus",Universal Serial Bus,1
+Computer,blank,"控制硬件的软件是______。",,操作系统,1
+Computer,choice,"GUI代表什么？","Graphical User Interface|General User Interface|Graphical Unit Interface|General Unit Interface",Graphical User Interface,1
+Computer,blank,"用于指向和点击的输入设备是______。",,鼠标,1
+Computer,choice,"DNS代表什么？","Domain Name System|Domain Network System|Digital Name System|Digital Network System",Domain Name System,1
+Computer,blank,"计算机的临时存储是______。",,RAM,1
+Computer,choice,"URL代表什么？","Uniform Resource Locator|Universal Resource Locator|Uniform Resource Link|Universal Resource Link",Uniform Resource Locator,2
+Computer,blank,"用于创建文档的软件是______。",,文字处理器,2
+Computer,choice,"IP代表什么？","Internet Protocol|Internet Program|Internal Protocol|Internal Program",Internet Protocol,2
+Computer,blank,"输出视觉显示的硬件是______。",,监视器,2
+Computer,choice,"路由器的主要功能是什么？","Direct network traffic|Run applications|Store data|Provide entertainment",Direct network traffic,2
+Computer,blank,"使用磁盘的存储介质是______。",,硬盘,2
+Computer,choice,"HTTP代表什么？","HyperText Transfer Protocol|HyperText Transfer Program|HyperText Transmission Protocol|HyperText Transmission Program",HyperText Transfer Protocol,2
+Computer,blank,"允许浏览网页的软件是______。",,浏览器,2
+Computer,choice,"FTP代表什么？","File Transfer Protocol|File Transfer Program|File Transmission Protocol|File Transmission Program",File Transfer Protocol,2
+Computer,blank,"安全通信的协议是______。",,HTTPS,2
+Computer,choice,"URL代表什么？","Uniform Resource Locator|Universal Resource Locator|Uniform Resource Link|Universal Resource Link",Uniform Resource Locator,2
+Computer,blank,"用于显示输出的设备是______。",,监视器,2
+Computer,choice,"DNS代表什么？","Domain Name System|Domain Network System|Digital Name System|Digital Network System",Domain Name System,2
+Computer,blank,"计算机的永久存储是______。",,硬盘,2
+Computer,choice,"GUI代表什么？","Graphical User Interface|General User Interface|Graphical Unit Interface|General Unit Interface",Graphical User Interface,2
+Computer,blank,"用于输入文本的设备是______。",,键盘,2
+Computer,choice,"CPU代表什么？","Central Processing Unit|Central Programming Unit|Computer Personal Unit|Central Processor Unit",Central Processing Unit,2
+Computer,blank,"计算机的临时存储是______。",,RAM,2
+Computer,choice,"LAN代表什么？","Local Area Network|Long Area Network|Local Access Network|Large Area Network",Local Area Network,2
+Computer,blank,"控制硬件的软件是______。",,操作系统,2
+Computer,choice,"HTML代表什么？","HyperText Markup Language|HyperText Making Language|HyperTool Markup Language|HyperLink Markup Language",HyperText Markup Language,2
+Computer,blank,"计算机的大脑是______。",,CPU,2
+Computer,choice,"RAM代表什么？","Random Access Memory|Read Access Memory|Run Access Memory|Read And Memory",Random Access Memory,2
+Computer,blank,"用于输入文本的设备是______。",,键盘,2
+Computer,choice,"SSD代表什么？","Solid State Drive|Solid State Disk|Solid Storage Drive|Solid Storage Disk",Solid State Drive,2
+Computer,blank,"用于本地通信的网络是______。",,局域网,2
+Computer,choice,"USB代表什么？","Universal Serial Bus|Universal System Bus|Universal Storage Bus|Universal Service Bus",Universal Serial Bus,2
+Computer,blank,"输出声音的硬件是______。",,扬声器,2
+Computer,choice,"IP代表什么？","Internet Protocol|Internet Program|Internal Protocol|Internal Program",Internet Protocol,2
+Computer,blank,"传输网页的协议是______。",,HTTP,2
+Computer,choice,"以下哪个不是编程范式？","Procedural|Object-Oriented|Functional|Microsoft",Microsoft,3
+Computer,choice,"快速排序算法在平均情况下的时间复杂度是什么？","O(n)|O(n^2)|O(n log n)|O(log n)",O(n log n),3
+Computer,choice,"以下哪个是NoSQL数据库？",MySQL|PostgreSQL|MongoDB|Oracle,MongoDB,3
+Computer,choice,"实现Web浏览器后退和前进按钮的数据结构是什么？","Queue|Stack|Tree|Linked List",Stack,3
+Computer,choice,"以下哪个是敏捷软件开发方法学的特征？","Big Design Upfront|Comprehensive Documentation|Iterative Development|Waterfall Model",Iterative Development,3
+Computer,choice,"Java异常处理中的'finally'块的目的是什么？","无论是否抛出异常都执行代码|处理特定类型的异常|创建新异常|捕获并重新抛出异常",无论是否抛出异常都执行代码,3
+Computer,choice,"以下哪个是计算机网络拓扑的类型？",Ring|Mesh|Bus|All of the above,All of the above,3
+Computer,choice,"搜索引擎用来对网页进行排名的算法是什么？","Bubble Sort|Merge Sort|PageRank|Quicksort",PageRank,3
+Computer,choice,"以下哪个是关系数据库模型中的关系类型？","One-to-one|One-to-many|Many-to-many|All of the above",All of the above,3
+Computer,choice,"在软件开发背景下，虚拟机的目的是什么？","将高级编程语言翻译成机器代码|为运行程序提供平台无关环境|优化代码以提高性能|创建图形用户界面",为运行程序提供平台无关环境,3
+Computer,blank,"将高级编程语言代码转换成机器可读代码的过程称为______。",,编译,3
+Computer,blank,"______是计算机系统的主要存储单元。",,RAM (随机存取存储器),3
+Computer,blank,"用于通过互联网发送和接收电子邮件的协议是______。",,SMTP (简单邮件传输协议),3
+Computer,blank,"______是管理如何在网络中传输数据的规则和约定集。",,协议,3
+Computer,blank,"在计算机安全领域，______是识别和验证用户或设备的过程。",,认证,3
+Computer,blank,"______是告诉计算机要执行什么的指令集。",,程序,3
+Computer,blank,"______是计算机系统中可以寻址的最小存储单位。",,字节,3
+Computer,blank,"将复杂问题分解为更小、更易管理的部分的过程称为______。",,分解,3
+Computer,blank,"______是管理系统资源并为其他程序提供服务的软件组件。",,操作系统,3
+Computer,blank,"在计算机网络中______是将数据分成更小单元进行传输并在目的地重新组装的过程。",,分组交换,3

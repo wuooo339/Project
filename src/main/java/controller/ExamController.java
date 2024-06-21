@@ -4,7 +4,7 @@ import model.Exam;
 import service.ExamService;
 import java.util.List;
 public class ExamController {
-    private ExamService examService = new ExamService();
+    private final ExamService examService = new ExamService();
 
     // Add exam
     public void addExam(Exam exam) {

@@ -1,6 +1,7 @@
 package view;
 
 import javafx.animation.PauseTransition;
+import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -16,19 +17,15 @@ import controller.QuestionController;
 import controller.UserController;
 
 public class AnswerQuestionsView extends VBox {
-    private QuestionController questionController = new QuestionController();
-    private ExamController examController;
-    private UserController userController;
+    private final QuestionController questionController = new QuestionController();
 
     public AnswerQuestionsView(Stage primaryStage, String username, ExamController examController, UserController userController) {
-        this.examController = examController;
-        this.userController = userController;
         setPadding(new Insets(10, 10, 10, 10));
         setSpacing(10);
 
         Label subjectLabel = new Label("科目:");
         ComboBox<String> subjectComboBox = new ComboBox<>();
-        subjectComboBox.getItems().addAll("Math", "Science", "History", "English","Geography","Computer");
+        subjectComboBox.getItems().addAll("Math", "Science", "History", "English", "Geography", "Computer");
 
         Label difficultyLabel = new Label("难度:");
         ComboBox<Integer> difficultyComboBox = new ComboBox<>();
@@ -39,9 +36,7 @@ public class AnswerQuestionsView extends VBox {
 
         Button startButton = new Button("开始答题");
         Button logoutButton = new Button("退出");
-        logoutButton.setOnAction(e -> {
-            primaryStage.setScene(new Scene(new view.StudentView(primaryStage, username, questionController, userController), 600, 400));
-        });
+        logoutButton.setOnAction(e -> primaryStage.setScene(new Scene(new StudentView(primaryStage, username, questionController, userController), 600, 400)));
 
         startButton.setOnAction(e -> {
             String subject = subjectComboBox.getValue();
@@ -64,10 +59,12 @@ public class AnswerQuestionsView extends VBox {
 
             getChildren().clear();
 
-            for (Question question : questions) {
-                Label questionLabel = new Label(question.getQuestionText());
+            for (int i = 0; i < questions.size(); i++) {
+                Question question = questions.get(i);
+                Label questionLabel = new Label((i + 1) + ". " + question.getQuestionText());
+                questionBox.getChildren().add(questionLabel);
+
                 if (question.getType().equals("choice")) {
-                    questionBox.getChildren().add(questionLabel);
                     ToggleGroup group = new ToggleGroup();
                     List<String> options = question.getChoices();
                     for (String option : options) {
@@ -77,31 +74,26 @@ public class AnswerQuestionsView extends VBox {
                         answerFields.add(radioButton);
                     }
                 } else if (question.getType().equals("blank")) {
-                    questionBox.getChildren().add(questionLabel);
                     String[] parts = question.getQuestionText().split("______");
-                    for (int i = 0; i < parts.length - 1; i++) {
+                    for (int j = 0; j < parts.length - 1; j++) {
                         TextField textField = new TextField();
                         questionBox.getChildren().add(textField);
                         answerFields.add(textField);
                     }
                 }
 
+                if (i < questions.size() - 1) {
+                    Separator separator = new Separator();
+                    questionBox.getChildren().add(separator);
+                }
             }
 
             Button submitButton = new Button("提交");
-            submitButton.setOnAction(submitEvent -> {
-                List<String> answers = getStrings(answerFields);
-                exam.setAnswers(answers);
-                exam.calculateScore();
-                examController.addExam(exam);
-                Label scoreLabel = new Label("测试成绩：" + exam.getScore());
-                getChildren().add(scoreLabel);
-                PauseTransition delay = new PauseTransition(Duration.seconds(1));
-                delay.setOnFinished(event -> primaryStage.setScene(new Scene(new StudentView(primaryStage, username, questionController, userController), 600, 400)));
-                delay.play();
-            });
+            submitButton.setOnAction(submitEvent -> submitExam(primaryStage, username, examController, userController, questions, answerFields, exam));
             questionBox.getChildren().add(submitButton);
             getChildren().add(scrollPane);
+
+            startTimer(primaryStage, username, examController, userController, questions, answerFields, exam, questions.size() * 2 * 60);
         });
 
         getChildren().addAll(subjectLabel, subjectComboBox, difficultyLabel, difficultyComboBox, questionCountLabel, questionCountField, startButton, logoutButton);
@@ -141,5 +133,55 @@ public class AnswerQuestionsView extends VBox {
         }
 
         return answers;
+    }
+
+    private void submitExam(Stage primaryStage, String username, ExamController examController, UserController userController, List<Question> questions, List<Control> answerFields, Exam exam) {
+        List<String> answers = getStrings(answerFields);
+        exam.setAnswers(answers);
+        exam.calculateScore();
+        examController.addExam(exam);
+        Label scoreLabel = new Label("测试成绩：" + exam.getScore());
+        getChildren().add(scoreLabel);
+        PauseTransition delay = new PauseTransition(Duration.seconds(1));
+        delay.setOnFinished(event -> primaryStage.setScene(new Scene(new StudentView(primaryStage, username, questionController, userController), 600, 400)));
+        delay.play();
+    }
+
+    private void startTimer(Stage primaryStage, String username, ExamController examController, UserController userController, List<Question> questions, List<Control> answerFields, Exam exam, int totalSeconds) {
+        Label timerLabel = new Label();
+        getChildren().add(0, timerLabel);
+
+        PauseTransition pause = new PauseTransition(Duration.seconds(totalSeconds));
+        pause.setOnFinished(event -> submitExam(primaryStage, username, examController, userController, questions, answerFields, exam));
+        pause.play();
+
+        TimerThread timerThread = new TimerThread(timerLabel, totalSeconds);
+        timerThread.start();
+    }
+
+    private static class TimerThread extends Thread {
+        private final Label timerLabel;
+        private int remainingSeconds;
+
+        public TimerThread(Label timerLabel, int totalSeconds) {
+            this.timerLabel = timerLabel;
+            this.remainingSeconds = totalSeconds;
+        }
+
+        @Override
+        public void run() {
+            while (remainingSeconds > 0) {
+                int minutes = remainingSeconds / 60;
+                int seconds = remainingSeconds % 60;
+                Platform.runLater(() -> timerLabel.setText(String.format("剩余时间: %02d:%02d", minutes, seconds)));
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                remainingSeconds--;
+            }
+            Platform.runLater(() -> timerLabel.setText("时间到!"));
+        }
     }
 }

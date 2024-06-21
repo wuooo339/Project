@@ -1,27 +1,27 @@
-.root {
-    -fx-background-color: #F0F0F0;
-    -fx-font-family: "Arial";
-}
-
 .title {
-    -fx-text-fill: #333333;
-}
-
-.button {
-    -fx-background-color: #4CAF50;
-    -fx-text-fill: white;
+    -fx-font-size: 24px;
     -fx-font-weight: bold;
-    -fx-padding: 10px 20px;
-    -fx-border-radius: 5px;
-    -fx-transition: -fx-scale-x 0.2s, -fx-scale-y 0.2s;
 }
 
-.button:hover {
-    -fx-scale-x: 1.05;
-    -fx-scale-y: 1.05;
+.function-box {
+    -fx-background-color: white;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
 }
 
-.button:pressed {
-    -fx-scale-x: 0.95;
-    -fx-scale-y: 0.95;
+.function-label {
+    -fx-font-size: 18px;
+}
+
+.logout-box {
+    -fx-background-color: #f8f8f8;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.logout-label {
+    -fx-font-size: 14px;
 }

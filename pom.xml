@@ -13,6 +13,25 @@
     <javafx.version>17.0.1</javafx.version>
   </properties>
   <dependencies>
+    <dependency>
+      <groupId>org.kordamp.ikonli</groupId>
+      <artifactId>ikonli-core</artifactId>
+      <version>12.3.1</version>
+    </dependency>
+
+    <!-- Ikonli JavaFX -->
+    <dependency>
+      <groupId>org.kordamp.ikonli</groupId>
+      <artifactId>ikonli-javafx</artifactId>
+      <version>12.3.1</version>
+    </dependency>
+
+    <!-- Ikonli Material Design Pack -->
+    <dependency>
+      <groupId>org.kordamp.ikonli</groupId>
+      <artifactId>ikonli-materialdesign2-pack</artifactId>
+      <version>12.3.1</version>
+    </dependency>
     <!-- JUnit for testing -->
     <dependency>
       <groupId>junit</groupId>

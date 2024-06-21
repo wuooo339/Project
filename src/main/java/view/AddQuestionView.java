@@ -11,6 +11,9 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class AddQuestionView {
 
     @FXML
@@ -42,6 +45,7 @@ public class AddQuestionView {
 
     private QuestionController questionController;
     private Stage primaryStage;
+    private static final Logger LOGGER = Logger.getLogger(AddQuestionView.class.getName());
 
     @FXML
     private void initialize() {
@@ -78,8 +82,9 @@ public class AddQuestionView {
             feedbackLabel.setText("题目添加成功");
         } catch (Exception e) {
             feedbackLabel.setText("题目添加失败");
-            e.printStackTrace();
+            LOGGER.log(Level.SEVERE, "Failed to add question", e);
         }
+
         clearFeedbackAfterDelay();
     }
 

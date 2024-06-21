@@ -10,11 +10,9 @@ import controller.*;
 import model.User;
 
 public class ManageUsersView extends VBox {
-    private UserController userController;
-    private ListView<User> userListView;
+    private final ListView<User> userListView;
 
     public ManageUsersView(Stage primaryStage, UserController userController) {
-        this.userController = userController;
         setPadding(new Insets(10, 10, 10, 10));
         setSpacing(10);
 

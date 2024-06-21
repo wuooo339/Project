@@ -45,6 +45,16 @@ Math,choice,30/5=?,4|5|6|7,6,2
 Math,blank,75-______=65,,10,2
 Math,choice,35-15=?,18|19|20|21,20,2
 Math,blank,80-______=70,,10,2
+Math,blank,The sum of the measures of the interior angles of a triangle is ______ degrees.,,180,3
+Math,blank,The value of π (pi) to two decimal places is ______.,,3.14,3
+Math,blank,The square root of 49 is ______.,,7,3
+Math,blank,If a = 5 and b = 3, then a^2 + b^2 = ______.,,34,3
+Math,blank,The formula for the area of a circle is π × r^______.,,2,3
+Math,choice,Which of the following is a prime number?,"2|6|11|15",11,3
+Math,choice,What is the value of 3^4?,"81|27|12|64",81,3
+Math,choice,Which of the following is a quadrilateral?,"Circle|Triangle|Rectangle|Sphere",Rectangle,3
+Math,choice,If x = 3 and y = 5 and what is the value of 2x + 3y?,"21|25|29|33",29,3
+
 History,choice,Who was the first president of the USA?,Washington|Lincoln|Jefferson|Adams,Washington,1
 History,blank,The year 1776 is significant because of ______.,,Declaration of Independence,1
 History,choice,Who discovered America?,Columbus|Vespucci|Magellan|Cook,Columbus,1
@@ -87,6 +97,17 @@ History,choice,Who was the leader of the Indian independence movement?,Gandhi|Ne
 History,blank,The Russian Revolution began in ______.,,1917,2
 History,choice,Who was the first Roman emperor?,Augustus|Julius Caesar|Nero|Caligula,Augustus,2
 History,blank,The Renaissance began in ______.,,14th century,2
+History,blank,The American Civil War was fought between ______ and ______.,,North and South,3
+History,blank,The Renaissance period began in the ______ century.,,14th,3
+History,blank,The pyramids of Giza were built in ______.,,Egypt,3
+History,blank,The First World War started in the year ______.,,1914,3
+History,blank,The fall of the Roman Empire occurred in ______.,,476 AD,3
+History,choice,Who was the first president of the United States?,"George Washington|Thomas Jefferson|Abraham Lincoln|John Adams",George Washington,3
+History,choice,Which ancient civilization built the Great Wall of China?,"Egyptians|Romans|Greeks|Chinese",Chinese,3
+History,choice,In which year did World War II end?,"1939|1941|1945|1948",1945,3
+History,choice,Which event marked the beginning of the French Revolution?,"Storming of the Bastille|Reign of Terror|Napoleonic Wars|Treaty of Versailles",Storming of the Bastille,3
+History,choice,Who was the leader of the Soviet Union during World War II?,"Joseph Stalin|Vladimir Lenin|Nikita Khrushchev|Mikhail Gorbachev",Joseph Stalin,3
+
 Science,choice,What is the chemical symbol for water?,H2O|CO2|O2|H2,H2O, 1
 Science,blank,The Earth revolves around the ______.,,sun,1
 Science,choice,What is the speed of light?,299792 km/s|150000 km/s|108000 km/s|384400 km/s,299792 km/s, 1
@@ -131,6 +152,17 @@ Science,choice,What gas do plants absorb during photosynthesis?,Carbon dioxide|O
 Science,blank,The primary gas in the Earth's atmosphere is ______.,,nitrogen,2
 Science,choice,What is the chemical symbol for hydrogen?,H|H2|Hy|H3, H, 2
 Science,blank,The unit of measure for electric current is ______.,,ampere,2
+Science,blank,The process by which green plants make their own food is called ______.,,photosynthesis,3
+Science,blank,The unit of measurement for electric current is the ______.,,ampere,3
+Science,blank,The chemical symbol for sodium is ______.,,Na,3
+Science,blank,The theory that explains the origin of the universe is known as the ______ theory.,,Big Bang,3
+Science,blank,The process of burning a substance with oxygen is called ______.,,combustion,3
+Science,choice,Which of the following is a renewable energy source?,"Coal|Natural Gas|Wind|Gasoline",Wind,3
+Science,choice,What is the process called when water changes from a liquid to a gas?,"Evaporation|Condensation|Sublimation|Precipitation",Evaporation,3
+Science,choice,Which of the following is a compound?,"Oxygen|Hydrogen|Water|Nitrogen",Water,3
+Science,choice,Which of the following is a physical property of matter?,"Color|Density|Taste|Chemical Composition",Density,3
+Science,choice,What is the name of the force that attracts objects towards each other?,"Gravity|Friction|Magnetism|Buoyancy",Gravity,3
+
 Geography,choice,What is the capital of France?,Paris|London|Berlin|Madrid, Paris, 1
 Geography,blank,The largest ocean on Earth is the ______.,,Pacific,1
 Geography,choice,What is the longest river in the world?,Nile|Amazon|Yangtze|Mississippi, Nile, 1
@@ -175,6 +207,17 @@ Geography,choice,What is the capital of South Africa?,Pretoria|Johannesburg|Cape
 Geography,blank,The highest mountain in Europe is ______.,,Elbrus,2
 Geography,choice,What is the capital of Mexico?,Mexico City|Guadalajara|Monterrey|Tijuana, Mexico City, 2
 Geography,blank,The largest desert in Africa is the ______.,,Sahara,2
+Geography,blank,The largest ocean in the world is the ______ Ocean.,,Pacific,3
+Geography,blank,The equator is an imaginary line that divides the Earth into the ______ and ______ hemispheres.,,Northern and Southern,3
+Geography,blank,The Amazon River flows through the country of ______.,,Brazil,3
+Geography,blank,The capital city of Australia is ______.,,Canberra,3
+Geography,blank,The highest mountain peak in the world is ______.,,Mount Everest,3
+Geography,choice,Which of the following is a landlocked country?,"Australia|Japan|Switzerland|Brazil",Switzerland,3
+Geography,choice,Which of the following is a desert?,"Sahara|Mississippi|Everglades|Amazon",Sahara,3
+Geography,choice,What is the name of the largest continent in the world?,"Asia|Africa|North America|Europe",Asia,3
+Geography,choice,Which of the following is a peninsula?,"Hawaii|Greenland|Iceland|Malta",Malta,3
+Geography,choice,Which of the following is a strait?,"Nile|English Channel|Everest|Andes",English Channel,3
+
 English,choice,What is the synonym of 'big'?,large|small|tiny|huge, large, 1
 English,blank,A ______ is used to end a sentence.,,period,1
 English,choice,What is the antonym of 'happy'?,sad|joyful|angry|excited, sad, 1
@@ -219,6 +262,17 @@ English,choice,What is the synonym of 'happy'?,joyful|sad|angry|excited, joyful,
 English,blank,The plural of 'sheep' is ______.,,sheep,2
 English,choice,What is the antonym of 'full'?,empty|complete|filled|stuffed, empty, 2
 English,blank,A ______ is used to show a direct quote.,,quotation mark,2
+English,blank,The past tense of the verb "go" is ______.,,went,3
+English,blank,A word that is opposite in meaning to another word is called an ______.,,antonym,3
+English,blank,The study of the structure and meaning of words is called ______.,,etymology,3
+English,blank,A ______ is a group of words that express a complete thought.,,sentence,3
+English,blank,A ______ is a figure of speech that makes a comparison between two things without using "like" or "as.",,metaphor,3
+English,choice,Which of the following is a preposition?,"And|But|From|Why",From,3
+English,choice,Which of the following is an example of an adverb?,"Quickly|Book|Laugh|Table",Quickly,3
+English,choice,What is the correct way to spell the plural of "box"?,"Boxs|Boxez|Boxes|Boxies",Boxes,3
+English,choice,Which of the following is a verb?,"Apple|Run|Red|Because",Run,3
+English,choice,Which of the following is a synonym for "intelligent"?,"Foolish|Clever|Lazy|Angry",Clever,3
+
 Computer,choice,What does CPU stand for?,Central Processing Unit|Central Programming Unit|Computer Personal Unit|Central Processor Unit, Central Processing Unit, 1
 Computer,blank,The device used to input text is a ______.,,keyboard,1
 Computer,choice,What does RAM stand for?,Random Access Memory|Read Access Memory|Run Access Memory|Read And Memory, Random Access Memory, 1
@@ -269,55 +323,6 @@ Computer,choice,What does USB stand for?,Universal Serial Bus|Universal System B
 Computer,blank,The hardware that outputs sound is a ______.,,speaker,2
 Computer,choice,What does IP stand for?,Internet Protocol|Internet Program|Internal Protocol|Internal Program, Internet Protocol, 2
 Computer,blank,The protocol used to transfer web pages is ______.,,HTTP,2
-Math,blank,The sum of the measures of the interior angles of a triangle is ______ degrees.,,180,3
-Math,blank,The value of π (pi) to two decimal places is ______.,,3.14,3
-Math,blank,The square root of 49 is ______.,,7,3
-Math,blank,If a = 5 and b = 3, then a^2 + b^2 = ______.,,34,3
-Math,blank,The formula for the area of a circle is π × r^______.,,2,3
-Math,choice,Which of the following is a prime number?,"2|6|11|15",11,3
-Math,choice,What is the value of 3^4?,"81|27|12|64",81,3
-Math,choice,Which of the following is a quadrilateral?,"Circle|Triangle|Rectangle|Sphere",Rectangle,3
-Math,choice,If x = 3 and y = 5 and what is the value of 2x + 3y?,"21|25|29|33",29,3
-Science,blank,The process by which green plants make their own food is called ______.,,photosynthesis,3
-Science,blank,The unit of measurement for electric current is the ______.,,ampere,3
-Science,blank,The chemical symbol for sodium is ______.,,Na,3
-Science,blank,The theory that explains the origin of the universe is known as the ______ theory.,,Big Bang,3
-Science,blank,The process of burning a substance with oxygen is called ______.,,combustion,3
-Science,choice,Which of the following is a renewable energy source?,"Coal|Natural Gas|Wind|Gasoline",Wind,3
-Science,choice,What is the process called when water changes from a liquid to a gas?,"Evaporation|Condensation|Sublimation|Precipitation",Evaporation,3
-Science,choice,Which of the following is a compound?,"Oxygen|Hydrogen|Water|Nitrogen",Water,3
-Science,choice,Which of the following is a physical property of matter?,"Color|Density|Taste|Chemical Composition",Density,3
-Science,choice,What is the name of the force that attracts objects towards each other?,"Gravity|Friction|Magnetism|Buoyancy",Gravity,3
-History,blank,The American Civil War was fought between ______ and ______.,,North and South,3
-History,blank,The Renaissance period began in the ______ century.,,14th,3
-History,blank,The pyramids of Giza were built in ______.,,Egypt,3
-History,blank,The First World War started in the year ______.,,1914,3
-History,blank,The fall of the Roman Empire occurred in ______.,,476 AD,3
-History,choice,Who was the first president of the United States?,"George Washington|Thomas Jefferson|Abraham Lincoln|John Adams",George Washington,3
-History,choice,Which ancient civilization built the Great Wall of China?,"Egyptians|Romans|Greeks|Chinese",Chinese,3
-History,choice,In which year did World War II end?,"1939|1941|1945|1948",1945,3
-History,choice,Which event marked the beginning of the French Revolution?,"Storming of the Bastille|Reign of Terror|Napoleonic Wars|Treaty of Versailles",Storming of the Bastille,3
-History,choice,Who was the leader of the Soviet Union during World War II?,"Joseph Stalin|Vladimir Lenin|Nikita Khrushchev|Mikhail Gorbachev",Joseph Stalin,3
-English,blank,The past tense of the verb "go" is ______.,,went,3
-English,blank,A word that is opposite in meaning to another word is called an ______.,,antonym,3
-English,blank,The study of the structure and meaning of words is called ______.,,etymology,3
-English,blank,A ______ is a group of words that express a complete thought.,,sentence,3
-English,blank,A ______ is a figure of speech that makes a comparison between two things without using "like" or "as.",,metaphor,3
-English,choice,Which of the following is a preposition?,"And|But|From|Why",From,3
-English,choice,Which of the following is an example of an adverb?,"Quickly|Book|Laugh|Table",Quickly,3
-English,choice,What is the correct way to spell the plural of "box"?,"Boxs|Boxez|Boxes|Boxies",Boxes,3
-English,choice,Which of the following is a verb?,"Apple|Run|Red|Because",Run,3
-English,choice,Which of the following is a synonym for "intelligent"?,"Foolish|Clever|Lazy|Angry",Clever,3
-Geography,blank,The largest ocean in the world is the ______ Ocean.,,Pacific,3
-Geography,blank,The equator is an imaginary line that divides the Earth into the ______ and ______ hemispheres.,,Northern and Southern,3
-Geography,blank,The Amazon River flows through the country of ______.,,Brazil,3
-Geography,blank,The capital city of Australia is ______.,,Canberra,3
-Geography,blank,The highest mountain peak in the world is ______.,,Mount Everest,3
-Geography,choice,Which of the following is a landlocked country?,"Australia|Japan|Switzerland|Brazil",Switzerland,3
-Geography,choice,Which of the following is a desert?,"Sahara|Mississippi|Everglades|Amazon",Sahara,3
-Geography,choice,What is the name of the largest continent in the world?,"Asia|Africa|North America|Europe",Asia,3
-Geography,choice,Which of the following is a peninsula?,"Hawaii|Greenland|Iceland|Malta",Malta,3
-Geography,choice,Which of the following is a strait?,"Nile|English Channel|Everest|Andes",English Channel,3
 Computer,choice,"Which of the following is not a programming paradigm?","Procedural|Object-Oriented|Functional|Microsoft",Microsoft,3
 Computer,choice,"What is the time complexity of the quicksort algorithm in the average case?","O(n)|O(n^2)|O(n log n)|O(log n)","O(n log n)",3
 Computer,choice,Which of the following is a NoSQL database?,MySQL|PostgreSQL|MongoDB|Oracle,MongoDB,3
