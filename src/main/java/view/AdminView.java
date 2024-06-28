@@ -27,7 +27,7 @@ public class AdminView extends BorderPane {
         setPadding(new Insets(20));
 
         // 加载 CSS 样式
-        getStylesheets().add(Objects.requireNonNull(getClass().getResource("/admin-view.css")).toExternalForm());
+        getStylesheets().add(Objects.requireNonNull(getClass().getResource("admin-view.css")).toExternalForm());
 
         // 创建主要功能区
         HBox mainFunctions = new HBox(20);
